@@ -708,17 +708,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: bullet
       objectReference: {fileID: 0}
-    - target: {fileID: 7096683011300853050, guid: a1f4db034a688b2449f66614ad286323, type: 3}
-      propertyPath: speed
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 7299965693763959569, guid: a1f4db034a688b2449f66614ad286323, type: 3}
-      propertyPath: m_GravityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7299965693763959569, guid: a1f4db034a688b2449f66614ad286323, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
+    - target: {fileID: 7585563220638872423, guid: a1f4db034a688b2449f66614ad286323, type: 3}
+      propertyPath: m_Radius
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: 8740699491432871622, guid: a1f4db034a688b2449f66614ad286323, type: 3}
       propertyPath: m_LocalPosition.x

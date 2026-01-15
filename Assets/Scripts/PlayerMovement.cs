@@ -27,11 +27,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
-        // Solo el Juja original debe ser la instancia persistente
         if (esElOriginal)
         {
             if (instance == null) instance = this;
-            // Quitamos el Destroy para que el clon pueda existir
         }
     }
 
@@ -84,7 +82,6 @@ public class PlayerMovement : MonoBehaviour
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, fuerzaSalto);
             }
 
-            // Disparo con corrección de >=
             if (Input.GetKey(KeyCode.S) && shootTimer >= shootCooldown)
             {
                 Disparar();
@@ -100,6 +97,12 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space) && enSuelo)
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, fuerzaSalto);
+            }
+
+            if (Input.GetKey(KeyCode.DownArrow) && shootTimer >= shootCooldown)
+            {
+                Disparar();
+                shootTimer = 0f;
             }
         }
 
