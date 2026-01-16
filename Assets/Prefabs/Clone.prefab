@@ -36,14 +36,30 @@ PrefabInstance:
       propertyPath: m_GravityScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4945090875335157584, guid: 3ad8eb9532b3e754490e0eab96648958, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5390425498948437616, guid: 3ad8eb9532b3e754490e0eab96648958, type: 3}
       propertyPath: enSuelo
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5390425498948437616, guid: 3ad8eb9532b3e754490e0eab96648958, type: 3}
+      propertyPath: fuerzaSalto
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5390425498948437616, guid: 3ad8eb9532b3e754490e0eab96648958, type: 3}
       propertyPath: prefabClone
       value: 
       objectReference: {fileID: 6957284371452496915}
+    - target: {fileID: 5390425498948437616, guid: 3ad8eb9532b3e754490e0eab96648958, type: 3}
+      propertyPath: esElOriginal
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5390425498948437616, guid: 3ad8eb9532b3e754490e0eab96648958, type: 3}
+      propertyPath: prefabPickupClone
+      value: 
+      objectReference: {fileID: 2459158020445263668, guid: f2ee46d61a71bd444b29c1904e19b238, type: 3}
     - target: {fileID: 5914576479220014889, guid: 3ad8eb9532b3e754490e0eab96648958, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5

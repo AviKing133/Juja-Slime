@@ -5,7 +5,6 @@ public class Bala : MonoBehaviour
 {
     public float fuerzaHorizontal = 20f;
     public float fuerzaVertical = 10f;
-    public float tiempoVida = 10f;
 
     [Header("Ajustes de Rebote")]
     public int rebotesMaximos = 3;
@@ -15,36 +14,51 @@ public class Bala : MonoBehaviour
     private Animator anim;
     private bool haTocadoSuelo = false;
 
+    // Nueva variable para saber quién disparó
+    [HideInInspector] public PlayerMovement dueno;
+    private Collider2D col;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         rebotesRestantes = rebotesMaximos;
+        col = GetComponent<Collider2D>();
 
-        float direccion = PlayerMovement.instance.mirandoDerecha ? 1f : -1f;
+        // SOLUCIÓN DIRECCIÓN: Usamos la dirección del dueño asignado al instanciar
+        float direccion = dueno.mirandoDerecha ? 1f : -1f;
         Vector2 vectorDisparo = new Vector2(direccion * fuerzaHorizontal, fuerzaVertical);
 
         rb.AddForce(vectorDisparo, ForceMode2D.Impulse);
     }
+    private void LateUpdate()
+    {
+        if (PlayerMovement.instance != null && PlayerMovement.instance.ammo == 3 && gameObject.CompareTag("bullet"))
+        {
+            col.isTrigger = true;
+        }
+        else
+        {
+            col.isTrigger = false;
+        }
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("player") || collision.gameObject.CompareTag("clone"))
+        // SOLUCIÓN MUNICIÓN: Ahora detectamos colisión con cualquier "PlayerMovement"
+        PlayerMovement scriptTocado = collision.gameObject.GetComponent<PlayerMovement>();
+
+        if (collision.gameObject.CompareTag("player") && haTocadoSuelo && PlayerMovement.instance.ammo < 3)
         {
             Destroy(gameObject);
+            scriptTocado.ammo++;
+            scriptTocado.aumentarEscala();
         }
+
         if (collision.gameObject.CompareTag("ground") && !haTocadoSuelo)
         {
             rebotesRestantes--;
-
-            if (rebotesRestantes <= 0)
-            {
-                FrenarBala();
-            }
-            else
-            {
-                Debug.Log("Rebote número: " + (rebotesMaximos - rebotesRestantes));
-            }
+            if (rebotesRestantes <= 0) FrenarBala();
         }
     }
 
@@ -58,11 +72,9 @@ public class Bala : MonoBehaviour
 
         StartCoroutine(ElevarBala(0.1f, 1f));
 
-        if (anim != null)
-        {
-            anim.SetTrigger("tocaSuelo");
-        }
+        if (anim != null) anim.SetTrigger("tocaSuelo");
     }
+
     IEnumerator ElevarBala(float distancia, float tiempo)
     {
         Vector3 posicionInicial = transform.position;
@@ -72,11 +84,9 @@ public class Bala : MonoBehaviour
         while (tiempoTranscurrido < tiempo)
         {
             transform.position = Vector3.Lerp(posicionInicial, posicionFinal, tiempoTranscurrido / tiempo);
-
             tiempoTranscurrido += Time.deltaTime;
             yield return null;
         }
-
         transform.position = posicionFinal;
     }
 }

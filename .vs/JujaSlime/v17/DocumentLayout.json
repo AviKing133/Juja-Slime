@@ -7,8 +7,12 @@
       "RelativeMoniker": "D:0:0:{8FD82F4A-E076-3DF7-EBB2-824B220532E8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8FD82F4A-E076-3DF7-EBB2-824B220532E8}|Assembly-CSharp.csproj|c:\\users\\carus\\jujaslime\\assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8FD82F4A-E076-3DF7-EBB2-824B220532E8}|Assembly-CSharp.csproj|C:\\Users\\carus\\JujaSlime\\assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8FD82F4A-E076-3DF7-EBB2-824B220532E8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FD82F4A-E076-3DF7-EBB2-824B220532E8}|Assembly-CSharp.csproj|c:\\users\\carus\\jujaslime\\assets\\scripts\\pickupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FD82F4A-E076-3DF7-EBB2-824B220532E8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\pickupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,8 +22,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Bullet.cs",
+              "DocumentMoniker": "C:\\Users\\carus\\JujaSlime\\Assets\\Scripts\\Bullet.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Bullet.cs",
+              "ToolTip": "C:\\Users\\carus\\JujaSlime\\Assets\\Scripts\\Bullet.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Bullet.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAUwCwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T10:28:34.671Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
@@ -34,15 +51,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Bullet.cs",
-              "DocumentMoniker": "C:\\Users\\carus\\JujaSlime\\Assets\\Scripts\\Bullet.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Bullet.cs",
-              "ToolTip": "C:\\Users\\carus\\JujaSlime\\Assets\\Scripts\\Bullet.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Bullet.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAIwDoAAAAlAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "PickupController.cs",
+              "DocumentMoniker": "C:\\Users\\carus\\JujaSlime\\Assets\\Scripts\\PickupController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PickupController.cs",
+              "ToolTip": "C:\\Users\\carus\\JujaSlime\\Assets\\Scripts\\PickupController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PickupController.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAowFoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-15T10:28:34.671Z",
+              "WhenOpened": "2026-01-16T10:21:41.886Z",
               "EditorCaption": ""
             },
             {
@@ -53,7 +70,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerMovement.cs",
               "ToolTip": "C:\\Users\\carus\\JujaSlime\\Assets\\Scripts\\PlayerMovement.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerMovement.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAwwGUAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAiwJUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-13T10:19:05.503Z",
               "EditorCaption": ""

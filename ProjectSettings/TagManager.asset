@@ -8,6 +8,7 @@ TagManager:
   - player
   - clone
   - bullet
+  - pickupClone
   layers:
   - Default
   - TransparentFX

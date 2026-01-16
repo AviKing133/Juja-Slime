@@ -214,4 +214,7 @@ MonoBehaviour:
   mirandoDerecha: 1
   prefabBullet: {fileID: 2854155865946665790, guid: a1f4db034a688b2449f66614ad286323, type: 3}
   prefabClone: {fileID: 6957284371452496915, guid: f8c1944003d5c5f4ba0b2690f3e289f0, type: 3}
+  prefabPickupClone: {fileID: 2459158020445263668, guid: f2ee46d61a71bd444b29c1904e19b238, type: 3}
   shootPoint: {fileID: 4796156026945780785}
+  cloneIsAvailable: 0
+  ammo: 1
