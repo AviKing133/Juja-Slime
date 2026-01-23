@@ -41,6 +41,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5390425498948437616, guid: 3ad8eb9532b3e754490e0eab96648958, type: 3}
+      propertyPath: ammo
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5390425498948437616, guid: 3ad8eb9532b3e754490e0eab96648958, type: 3}
       propertyPath: enSuelo
       value: 1
       objectReference: {fileID: 0}

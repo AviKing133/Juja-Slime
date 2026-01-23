@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class Bala : MonoBehaviour
+public class Bullet : MonoBehaviour
 {
     public float fuerzaHorizontal = 20f;
     public float fuerzaVertical = 10f;
@@ -14,7 +14,6 @@ public class Bala : MonoBehaviour
     private Animator anim;
     private bool haTocadoSuelo = false;
 
-    // Nueva variable para saber quién disparó
     [HideInInspector] public PlayerMovement dueno;
     private Collider2D col;
 
@@ -25,15 +24,15 @@ public class Bala : MonoBehaviour
         rebotesRestantes = rebotesMaximos;
         col = GetComponent<Collider2D>();
 
-        // SOLUCIÓN DIRECCIÓN: Usamos la dirección del dueño asignado al instanciar
         float direccion = dueno.mirandoDerecha ? 1f : -1f;
         Vector2 vectorDisparo = new Vector2(direccion * fuerzaHorizontal, fuerzaVertical);
-
         rb.AddForce(vectorDisparo, ForceMode2D.Impulse);
     }
+
     private void LateUpdate()
     {
-        if (PlayerMovement.instance != null && PlayerMovement.instance.ammo == 3 && gameObject.CompareTag("bullet"))
+        // Si el jugador original está lleno, las balas del suelo se vuelven triggers para no estorbar
+        if (PlayerMovement.instance != null && PlayerMovement.instance.ammo >= 3 && gameObject.CompareTag("bullet"))
         {
             col.isTrigger = true;
         }
@@ -45,14 +44,17 @@ public class Bala : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // SOLUCIÓN MUNICIÓN: Ahora detectamos colisión con cualquier "PlayerMovement"
         PlayerMovement scriptTocado = collision.gameObject.GetComponent<PlayerMovement>();
 
-        if (collision.gameObject.CompareTag("player") && haTocadoSuelo && PlayerMovement.instance.ammo < 3)
+        // Solo se recoge si ha tocado el suelo y el que la toca tiene espacio de munición
+        if (collision.gameObject.CompareTag("player") && haTocadoSuelo)
         {
-            Destroy(gameObject);
-            scriptTocado.ammo++;
-            scriptTocado.aumentarEscala();
+            if (scriptTocado.ammo < 3)
+            {
+                scriptTocado.ammo++;
+                scriptTocado.ActualizarEscala(); // <--- EL CAMBIO CLAVE
+                Destroy(gameObject);
+            }
         }
 
         if (collision.gameObject.CompareTag("ground") && !haTocadoSuelo)
@@ -66,12 +68,13 @@ public class Bala : MonoBehaviour
     {
         haTocadoSuelo = true;
         rb.linearVelocity = Vector2.zero;
-        transform.position = new Vector3(transform.position.x, transform.position.y + 0.2f, transform.position.z);
         rb.angularVelocity = 0f;
         rb.bodyType = RigidbodyType2D.Kinematic;
 
-        StartCoroutine(ElevarBala(0.1f, 1f));
+        // Subir un poco para que no se entierre en el suelo
+        transform.position = new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z);
 
+        StartCoroutine(ElevarBala(0.1f, 1f));
         if (anim != null) anim.SetTrigger("tocaSuelo");
     }
 

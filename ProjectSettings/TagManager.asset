@@ -9,6 +9,7 @@ TagManager:
   - clone
   - bullet
   - pickupClone
+  - jujer
   layers:
   - Default
   - TransparentFX

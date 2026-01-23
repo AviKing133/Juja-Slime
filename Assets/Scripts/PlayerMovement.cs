@@ -1,21 +1,31 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
     public static PlayerMovement instance;
 
-    [Header("Configuración de Movimiento")]
-    public float velocidad = 8f;
-    public float fuerzaSalto = 12f;
+    [Header("Configuración de Escala")]
+    public float escalaBaseOriginal = 0.6f;
+    public float valorMasaClon = 0.4f;
+    public float valorPorBala = 0.1f;
 
     [Header("Estado")]
-    [SerializeField] private bool enSuelo;
     public bool esElOriginal = true;
+    public bool cloneIsAvailable = true;
+    public int ammo = 0;
+    public bool mirandoDerecha = true;
+    [SerializeField] private bool enSuelo;
+
+    private float timerAturdimiento = 0f;
 
     private Rigidbody2D rb;
     private float movimientoHorizontal = 0f;
-    public bool mirandoDerecha = true;
+
+    [Header("Configuración Movimiento")]
+    public float velocidad = 8f;
+    public float fuerzaSalto = 12f;
 
     [Header("Referencias")]
     public GameObject prefabBullet;
@@ -23,128 +33,142 @@ public class PlayerMovement : MonoBehaviour
     public GameObject prefabPickupClone;
     public Transform shootPoint;
 
-    public bool cloneIsAvailable = false;
-    private float shootCooldown = 0.5f;
     private float shootTimer = 0f;
-
-    public int ammo = 1;
+    private float shootCooldown = 0.5f;
 
     private void Awake()
     {
-        if (esElOriginal)
-        {
-            if (instance == null) instance = this;
-        }
+        if (esElOriginal && instance == null) instance = this;
     }
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         if (!esElOriginal) StartCoroutine(CicloDeVidaClon());
+        ActualizarEscala();
     }
 
     void Update()
     {
         shootTimer += Time.deltaTime;
 
+        // Reducimos el timer de aturdimiento cada frame
+        if (timerAturdimiento > 0)
+        {
+            timerAturdimiento -= Time.deltaTime;
+        }
+
         if (esElOriginal && Input.GetKeyDown(KeyCode.F) && cloneIsAvailable)
         {
-            GameObject nuevoClon = Instantiate(prefabClone, new Vector3(transform.position.x + 1, transform.position.y, 0), Quaternion.identity);
-            PlayerMovement scriptClon = nuevoClon.GetComponent<PlayerMovement>();
-            if (scriptClon != null) scriptClon.esElOriginal = false;
-            cloneIsAvailable = false;
+            SpawnearClon();
         }
 
-        movimientoHorizontal = 0;
-
-        if (esElOriginal)
-        {
-            if (Input.GetKey(KeyCode.D)) movimientoHorizontal = velocidad;
-            else if (Input.GetKey(KeyCode.A)) movimientoHorizontal = -velocidad;
-
-            if (Input.GetKeyDown(KeyCode.Space) && enSuelo)
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, fuerzaSalto);
-
-            if (Input.GetKey(KeyCode.S) && shootTimer >= shootCooldown && ammo > 0)
-            {
-                Disparar();
-                shootTimer = 0f;
-                ammo--;
-                disminuirEscala();
-            }
-        }
-        else
-        {
-            if (Input.GetKey(KeyCode.RightArrow)) movimientoHorizontal = velocidad;
-            else if (Input.GetKey(KeyCode.LeftArrow)) movimientoHorizontal = -velocidad;
-
-            if (Input.GetKeyDown(KeyCode.Space) && enSuelo)
-            {
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, fuerzaSalto);
-                enSuelo = false;
-            }
-
-            if (Input.GetKey(KeyCode.DownArrow) && shootTimer >= shootCooldown && ammo > 0)
-            {
-                Disparar();
-                shootTimer = 0f;
-                ammo--;
-                disminuirEscala();
-            }
-        }
+        ManejarInputs();
 
         if (movimientoHorizontal > 0 && !mirandoDerecha) Girar();
         else if (movimientoHorizontal < 0 && mirandoDerecha) Girar();
     }
 
-    void Disparar()
+    void FixedUpdate()
     {
-        GameObject balaObj = Instantiate(prefabBullet, shootPoint.position, Quaternion.identity);
-        Bala scriptBala = balaObj.GetComponent<Bala>();
-        if (scriptBala != null)
+        // SI NO ESTAMOS ATURDIDOS: Controlamos la velocidad normalmente (Suave)
+        // SI ESTAMOS ATURDIDOS: No tocamos el Rigidbody para dejar que la fuerza de la rata actúe
+        if (timerAturdimiento <= 0)
         {
-            scriptBala.dueno = this;
+            rb.linearVelocity = new Vector2(movimientoHorizontal, rb.linearVelocity.y);
         }
     }
 
-    void FixedUpdate()
+    public void RecibirGolpe()
     {
-        rb.linearVelocity = new Vector2(movimientoHorizontal, rb.linearVelocity.y);
+        // Bloqueamos el control por 0.3 segundos
+        timerAturdimiento = 0.3f;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    // --- RESTO DE MÉTODOS IGUALES ---
+
+    void ManejarInputs()
     {
-        if (collision.gameObject.CompareTag("ground") || collision.gameObject.CompareTag("player") && gameObject.CompareTag("clone")) enSuelo = true;
+        movimientoHorizontal = 0;
+        if (esElOriginal)
+        {
+            if (Input.GetKey(KeyCode.D)) movimientoHorizontal = velocidad;
+            else if (Input.GetKey(KeyCode.A)) movimientoHorizontal = -velocidad;
+            if (Input.GetKeyDown(KeyCode.Space) && enSuelo) Salto();
+            if (Input.GetKey(KeyCode.S) && shootTimer >= shootCooldown && ammo > 0) Disparar();
+        }
+        else
+        {
+            if (Input.GetKey(KeyCode.RightArrow)) movimientoHorizontal = velocidad;
+            else if (Input.GetKey(KeyCode.LeftArrow)) movimientoHorizontal = -velocidad;
+            if (Input.GetKeyDown(KeyCode.Space) && enSuelo) Salto();
+            if (Input.GetKey(KeyCode.DownArrow) && shootTimer >= shootCooldown && ammo > 0) Disparar();
+        }
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    public void PerderVida()
     {
-        if (collision.gameObject.CompareTag("ground")) enSuelo = false;
+        if (ammo > 0) { ammo--; ActualizarEscala(); }
+        else SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
+    void SpawnearClon()
+    {
+        cloneIsAvailable = false;
+        float offset = mirandoDerecha ? 1.2f : -1.2f;
+        Vector3 spawnPos = transform.position + new Vector3(offset, 0, 0);
+        GameObject nuevoClonObj = Instantiate(prefabClone, spawnPos, Quaternion.identity);
+        PlayerMovement scriptClon = nuevoClonObj.GetComponent<PlayerMovement>();
+        if (scriptClon != null)
+        {
+            scriptClon.esElOriginal = false;
+            scriptClon.mirandoDerecha = this.mirandoDerecha;
+            if (this.ammo >= 2) { this.ammo--; scriptClon.ammo = 1; }
+            else { scriptClon.ammo = 0; }
+            scriptClon.ActualizarEscala();
+        }
+        ActualizarEscala();
+    }
+
+    public void ActualizarEscala()
+    {
+        float nuevaEscalaY;
+        if (esElOriginal)
+        {
+            float bonoClon = cloneIsAvailable ? valorMasaClon : 0f;
+            nuevaEscalaY = escalaBaseOriginal + (ammo * valorPorBala) + bonoClon;
+        }
+        else
+        {
+            nuevaEscalaY = valorMasaClon + (ammo * valorPorBala);
+        }
+        float signoX = mirandoDerecha ? 1 : -1;
+        transform.localScale = new Vector3(nuevaEscalaY * signoX, nuevaEscalaY, 1);
+    }
+
+    void Disparar()
+    {
+        shootTimer = 0f;
+        ammo--;
+        GameObject balaObj = Instantiate(prefabBullet, shootPoint.position, Quaternion.identity);
+        Bullet scriptBala = balaObj.GetComponent<Bullet>();
+        if (scriptBala != null) scriptBala.dueno = this;
+        ActualizarEscala();
+    }
+
+    void Salto() { rb.linearVelocity = new Vector2(rb.linearVelocity.x, fuerzaSalto); enSuelo = false; }
+    void Girar() { mirandoDerecha = !mirandoDerecha; ActualizarEscala(); }
+    private void OnCollisionEnter2D(Collision2D c) { if (c.gameObject.CompareTag("ground")) enSuelo = true; }
+    private void OnCollisionExit2D(Collision2D c) { if (c.gameObject.CompareTag("ground")) enSuelo = false; }
+
     IEnumerator CicloDeVidaClon()
     {
         yield return new WaitForSeconds(10f);
-        // Al morir, instancia el pickup en su posición actual
         if (prefabPickupClone != null)
         {
-            Instantiate(prefabPickupClone, transform.position, Quaternion.identity);
+            GameObject pickup = Instantiate(prefabPickupClone, transform.position, Quaternion.identity);
+            pickup.GetComponent<PickupController>().storedAmmo = ammo;
         }
         Destroy(gameObject);
-    }
-    void Girar()
-    {
-        mirandoDerecha = !mirandoDerecha;
-        Vector3 escala = transform.localScale;
-        escala.x *= -1;
-        transform.localScale = escala;
-    }
-    public void aumentarEscala()
-    {
-        transform.localScale += transform.localScale * 0.15f;
-    }
-
-    public void disminuirEscala()
-    {
-        transform.localScale -= transform.localScale * 0.15f;
     }
 }

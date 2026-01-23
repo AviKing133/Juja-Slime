@@ -11,12 +11,16 @@ public class PickupController : MonoBehaviour
     private int rebotesRestantes;
     private bool haFrenado = false;
 
+    [Header("Datos de Contenido")]
+    public int storedAmmo = 0;
+
     void Start()
     {
         col = GetComponent<Collider2D>();
         rb = GetComponent<Rigidbody2D>();
         rebotesRestantes = rebotesMaximos;
 
+        // Impulso inicial si es un clon para que no caiga estático
         if (gameObject.CompareTag("pickupClone"))
         {
             rb.AddForce(new Vector2(Random.Range(-1f, 1f), 2f), ForceMode2D.Impulse);
@@ -25,7 +29,8 @@ public class PickupController : MonoBehaviour
 
     void LateUpdate()
     {
-        if (PlayerMovement.instance.ammo == 3 && gameObject.CompareTag("bullet"))
+        // Evitar que el jugador recoja si ya está lleno de munición (solo para balas sueltas)
+        if (PlayerMovement.instance.ammo >= 3 && gameObject.CompareTag("bullet"))
         {
             col.isTrigger = true;
         }
@@ -37,6 +42,7 @@ public class PickupController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        // --- LÓGICA DE REBOTE Y FRENADO ---
         if (collision.gameObject.CompareTag("ground") && !haFrenado)
         {
             rebotesRestantes--;
@@ -46,19 +52,29 @@ public class PickupController : MonoBehaviour
             }
         }
 
-        PlayerMovement scriptTocado = collision.gameObject.GetComponent<PlayerMovement>();
-
-        if (collision.gameObject.CompareTag("player"))
+        // --- LÓGICA DE RECOLECCIÓN ---
+        if (collision.gameObject.CompareTag("player") || collision.gameObject.CompareTag("clone"))
         {
-            if (gameObject.CompareTag("bullet") && PlayerMovement.instance.ammo < 3)
+            PlayerMovement player = collision.gameObject.GetComponent<PlayerMovement>();
+            if (player == null) return;
+
+            // Caso A: Es una bala
+            if (gameObject.CompareTag("bullet") && player.ammo < 3)
             {
+                player.ammo++;
+                player.ActualizarEscala(); // Recalcula escala total limpia
                 Destroy(gameObject);
-                scriptTocado.ammo++;
-                scriptTocado.aumentarEscala();
             }
-            else if (gameObject.CompareTag("pickupClone"))
+            // Caso B: Es el clon regresando (solo se recoge si ya frenó en el suelo)
+            else if (gameObject.CompareTag("pickupClone") && haFrenado)
             {
-                PlayerMovement.instance.cloneIsAvailable = true;
+                player.cloneIsAvailable = true; // El original recupera su "masa de clon"
+                player.ammo += storedAmmo;      // Recupera la munición que tenía el clon
+
+                // Limitar la munición máxima por seguridad
+                if (player.ammo > 3) player.ammo = 3;
+
+                player.ActualizarEscala(); // Recalcula escala total limpia
                 Destroy(gameObject);
             }
         }
