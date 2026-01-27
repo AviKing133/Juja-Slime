@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.8701, y: 0.1935, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -168,8 +168,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fuerzaHorizontal: 15
   fuerzaVertical: 5
-  tiempoVida: 3
   rebotesMaximos: 3
+  dueno: {fileID: 0}
 --- !u!95 &2911743788312402817
 Animator:
   serializedVersion: 7

@@ -32,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject prefabClone;
     public GameObject prefabPickupClone;
     public Transform shootPoint;
+    public Animator anim;
 
     private float shootTimer = 0f;
     private float shootCooldown = 0.5f;
@@ -43,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         if (!esElOriginal) StartCoroutine(CicloDeVidaClon());
         ActualizarEscala();
@@ -104,6 +106,7 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space) && enSuelo) Salto();
             if (Input.GetKey(KeyCode.DownArrow) && shootTimer >= shootCooldown && ammo > 0) Disparar();
         }
+        anim.SetBool("IsMoving", movimientoHorizontal != 0);
     }
 
     public void PerderVida()
