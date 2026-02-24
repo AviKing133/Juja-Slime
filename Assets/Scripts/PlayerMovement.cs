@@ -28,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
     public float fuerzaSalto = 12f;
 
     [Header("Referencias")]
+    public InterfaceBehaviour InterfaceBehaviour;
     public GameObject prefabBullet;
     public GameObject prefabClone;
     public GameObject prefabPickupClone;
@@ -147,6 +148,7 @@ public class PlayerMovement : MonoBehaviour
         }
         float signoX = mirandoDerecha ? 1 : -1;
         transform.localScale = new Vector3(nuevaEscalaY * signoX, nuevaEscalaY, 1);
+        InterfaceBehaviour.UpdateVidas(ammo);
     }
 
     void Disparar()

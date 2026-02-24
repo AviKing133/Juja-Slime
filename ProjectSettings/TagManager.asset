@@ -10,6 +10,7 @@ TagManager:
   - bullet
   - pickupClone
   - jujer
+  - threat
   layers:
   - Default
   - TransparentFX

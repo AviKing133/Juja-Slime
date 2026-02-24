@@ -110,7 +110,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 130
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
   m_Color: {r: 0.7924528, g: 0.16073336, b: 0.16073336, a: 1}
   m_FlipX: 0
@@ -213,3 +213,5 @@ MonoBehaviour:
   distanciaAbajo: 0.5
   distanciaFrente: 0.2
   tagSuelo: ground
+  empujeHorizontal: 8
+  empujeVertical: 10

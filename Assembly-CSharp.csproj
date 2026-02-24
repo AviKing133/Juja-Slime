@@ -61,11 +61,17 @@
     <Analyzer Include="D:\Unity\Motor\6000.0.60f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\InterfaceBehaviour.cs" />
     <Compile Include="Assets\Scripts\JujerController.cs" />
     <Compile Include="Assets\Scripts\RataGorda.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
+    <Compile Include="Assets\Scripts\Paralax.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PickupController.cs" />
+    <Compile Include="Assets\Scripts\CameraController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Medieval_pixel_art_asset_FREE\pixel_snapping_README.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

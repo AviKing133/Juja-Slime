@@ -22,7 +22,6 @@ public class JujerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        // Busca el objeto hijo llamado "GroundCheck" (o como lo hayas nombrado)
         detector = transform.Find("GroundCheck");
 
         if (detector == null) Debug.LogError("No se encontró el objeto hijo GroundCheck en " + gameObject.name);
