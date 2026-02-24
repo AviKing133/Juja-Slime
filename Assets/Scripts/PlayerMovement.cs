@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
     public float fuerzaSalto = 12f;
 
     [Header("Referencias")]
-    public InterfaceBehaviour InterfaceBehaviour;
+    public InterfaceBehaviour Interface;
     public GameObject prefabBullet;
     public GameObject prefabClone;
     public GameObject prefabPickupClone;
@@ -45,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        Interface = Object.FindAnyObjectByType<InterfaceBehaviour>();
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         if (!esElOriginal) StartCoroutine(CicloDeVidaClon());
@@ -74,8 +75,8 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        // SI NO ESTAMOS ATURDIDOS: Controlamos la velocidad normalmente (Suave)
-        // SI ESTAMOS ATURDIDOS: No tocamos el Rigidbody para dejar que la fuerza de la rata actúe
+        // SI NO ESTAMOS ATURDIDOS: Controlamos la velocidad normalmente
+        // SI ESTAMOS ATURDIDOS: No tocamos el Rigidbody
         if (timerAturdimiento <= 0)
         {
             rb.linearVelocity = new Vector2(movimientoHorizontal, rb.linearVelocity.y);
@@ -84,11 +85,9 @@ public class PlayerMovement : MonoBehaviour
 
     public void RecibirGolpe()
     {
-        // Bloqueamos el control por 0.3 segundos
         timerAturdimiento = 0.3f;
     }
 
-    // --- RESTO DE MÉTODOS IGUALES ---
 
     void ManejarInputs()
     {
@@ -131,6 +130,7 @@ public class PlayerMovement : MonoBehaviour
             else { scriptClon.ammo = 0; }
             scriptClon.ActualizarEscala();
         }
+        Interface.UpdateVidas(ammo);
         ActualizarEscala();
     }
 
@@ -148,13 +148,13 @@ public class PlayerMovement : MonoBehaviour
         }
         float signoX = mirandoDerecha ? 1 : -1;
         transform.localScale = new Vector3(nuevaEscalaY * signoX, nuevaEscalaY, 1);
-        InterfaceBehaviour.UpdateVidas(ammo);
     }
 
     void Disparar()
     {
         shootTimer = 0f;
         ammo--;
+        Interface.UpdateVidas(ammo);
         GameObject balaObj = Instantiate(prefabBullet, shootPoint.position, Quaternion.identity);
         Bullet scriptBala = balaObj.GetComponent<Bullet>();
         if (scriptBala != null) scriptBala.dueno = this;
@@ -163,8 +163,14 @@ public class PlayerMovement : MonoBehaviour
 
     void Salto() { rb.linearVelocity = new Vector2(rb.linearVelocity.x, fuerzaSalto); enSuelo = false; }
     void Girar() { mirandoDerecha = !mirandoDerecha; ActualizarEscala(); }
-    private void OnCollisionEnter2D(Collision2D c) { if (c.gameObject.CompareTag("ground")) enSuelo = true; }
-    private void OnCollisionExit2D(Collision2D c) { if (c.gameObject.CompareTag("ground")) enSuelo = false; }
+    private void OnCollisionEnter2D(Collision2D c) 
+    {
+        if (c.gameObject.CompareTag("ground")) enSuelo = true; 
+    }
+    private void OnCollisionExit2D(Collision2D c) 
+    { 
+        if (c.gameObject.CompareTag("ground")) enSuelo = false; 
+    }
 
     IEnumerator CicloDeVidaClon()
     {

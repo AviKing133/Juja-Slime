@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class Bullet : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class Bullet : MonoBehaviour
     public int rebotesMaximos = 3;
     private int rebotesRestantes;
 
+    public InterfaceBehaviour Interface;
     private Rigidbody2D rb;
     private Animator anim;
     private bool haTocadoSuelo = false;
@@ -19,6 +21,7 @@ public class Bullet : MonoBehaviour
 
     void Start()
     {
+        Interface = Object.FindAnyObjectByType<InterfaceBehaviour>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         rebotesRestantes = rebotesMaximos;
@@ -52,7 +55,8 @@ public class Bullet : MonoBehaviour
             if (scriptTocado.ammo < 3)
             {
                 scriptTocado.ammo++;
-                scriptTocado.ActualizarEscala(); // <--- EL CAMBIO CLAVE
+                scriptTocado.ActualizarEscala();
+                Interface.UpdateVidas(scriptTocado.ammo);
                 Destroy(gameObject);
             }
         }

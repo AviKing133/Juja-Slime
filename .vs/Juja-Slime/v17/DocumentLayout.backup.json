@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "D:\\Unity\\Proyectos\\Juja-Slime\\Juja-Slime\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|D:\\Unity\\Proyectos\\Juja-Slime\\Juja-Slime\\assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|d:\\unity\\proyectos\\juja-slime\\juja-slime\\assets\\scripts\\interfacebehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interfacebehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|D:\\Unity\\Proyectos\\Juja-Slime\\Juja-Slime\\assets\\scripts\\jujercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\jujercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|d:\\unity\\proyectos\\juja-slime\\juja-slime\\assets\\scripts\\paralax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\paralax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,14 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|D:\\Unity\\Proyectos\\Juja-Slime\\Juja-Slime\\assets\\scripts\\cameracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cameracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|D:\\Unity\\Proyectos\\Juja-Slime\\Juja-Slime\\assets\\scripts\\jujercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\jujercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|D:\\Unity\\Proyectos\\Juja-Slime\\Juja-Slime\\assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|D:\\Unity\\Proyectos\\Juja-Slime\\Juja-Slime\\assets\\scripts\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,7 +50,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "InterfaceBehaviour.cs",
+              "DocumentMoniker": "D:\\Unity\\Proyectos\\Juja-Slime\\Juja-Slime\\Assets\\Scripts\\InterfaceBehaviour.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\InterfaceBehaviour.cs",
+              "ToolTip": "D:\\Unity\\Proyectos\\Juja-Slime\\Juja-Slime\\Assets\\Scripts\\InterfaceBehaviour.cs",
+              "RelativeToolTip": "Assets\\Scripts\\InterfaceBehaviour.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAwwBYAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-17T17:56:29.892Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Paralax.cs",
               "DocumentMoniker": "D:\\Unity\\Proyectos\\Juja-Slime\\Juja-Slime\\Assets\\Scripts\\Paralax.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Paralax.cs",
@@ -59,7 +76,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "CameraController.cs",
               "DocumentMoniker": "D:\\Unity\\Proyectos\\Juja-Slime\\Juja-Slime\\Assets\\Scripts\\CameraController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\CameraController.cs",
@@ -71,7 +88,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "JujerController.cs",
               "DocumentMoniker": "D:\\Unity\\Proyectos\\Juja-Slime\\Juja-Slime\\Assets\\Scripts\\JujerController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\JujerController.cs",
@@ -79,11 +96,12 @@
               "RelativeToolTip": "Assets\\Scripts\\JujerController.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAAwB4AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-10T14:16:24.61Z"
+              "WhenOpened": "2026-02-10T14:16:24.61Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "GridEditorUtility.cs",
               "DocumentMoniker": "D:\\Unity\\Proyectos\\Juja-Slime\\Juja-Slime\\Library\\PackageCache\\com.unity.2d.tilemap@b1f6833cdf82\\Editor\\GridEditorUtility.cs",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.2d.tilemap@b1f6833cdf82\\Editor\\GridEditorUtility.cs",
@@ -91,12 +109,11 @@
               "RelativeToolTip": "Library\\PackageCache\\com.unity.2d.tilemap@b1f6833cdf82\\Editor\\GridEditorUtility.cs",
               "ViewState": "AgIAAEAAAAAAAAAAAAAiwCMAAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-03T18:40:32.924Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-03T18:40:32.924Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Bullet.cs",
               "DocumentMoniker": "D:\\Unity\\Proyectos\\Juja-Slime\\Juja-Slime\\Assets\\Scripts\\Bullet.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Bullet.cs",
@@ -108,15 +125,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "PlayerMovement.cs",
               "DocumentMoniker": "D:\\Unity\\Proyectos\\Juja-Slime\\Juja-Slime\\Assets\\Scripts\\PlayerMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerMovement.cs",
               "ToolTip": "D:\\Unity\\Proyectos\\Juja-Slime\\Juja-Slime\\Assets\\Scripts\\PlayerMovement.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerMovement.cs",
-              "ViewState": "AgIAAFwAAAAAAAAAAAAswG8AAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAIwJYAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-13T15:46:49.158Z"
+              "WhenOpened": "2026-01-13T15:46:49.158Z",
+              "EditorCaption": ""
             }
           ]
         },
