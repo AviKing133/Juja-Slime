@@ -6,6 +6,8 @@ public class PickupController : MonoBehaviour
     private Collider2D col;
     private Rigidbody2D rb;
 
+    public InterfaceBehaviour Interface;
+
     [Header("Configuración de Rebote")]
     public int rebotesMaximos = 2;
     private int rebotesRestantes;
@@ -16,6 +18,7 @@ public class PickupController : MonoBehaviour
 
     void Start()
     {
+        Interface = Object.FindAnyObjectByType<InterfaceBehaviour>();
         col = GetComponent<Collider2D>();
         rb = GetComponent<Rigidbody2D>();
         rebotesRestantes = rebotesMaximos;
@@ -70,6 +73,7 @@ public class PickupController : MonoBehaviour
             {
                 player.cloneIsAvailable = true; // El original recupera su "masa de clon"
                 player.ammo += storedAmmo;      // Recupera la munición que tenía el clon
+                
 
                 // Limitar la munición máxima por seguridad
                 if (player.ammo > 3) player.ammo = 3;
@@ -77,6 +81,7 @@ public class PickupController : MonoBehaviour
                 player.ActualizarEscala(); // Recalcula escala total limpia
                 Destroy(gameObject);
             }
+            Interface.UpdateVidas(player.ammo);
         }
     }
 

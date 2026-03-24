@@ -162,6 +162,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86a71968e0cfc3048b14d0a39990fa7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  capasObstaculos:
+    serializedVersion: 2
+    m_Bits: 64
+  distanciaSpawn: 1.2
   escalaBaseOriginal: 4
   valorMasaClon: 3
   valorPorBala: 0.5
@@ -172,7 +176,7 @@ MonoBehaviour:
   enSuelo: 0
   velocidad: 6
   fuerzaSalto: 6
-  InterfaceBehaviour: {fileID: 0}
+  Interface: {fileID: 0}
   prefabBullet: {fileID: 2854155865946665790, guid: a1f4db034a688b2449f66614ad286323, type: 3}
   prefabClone: {fileID: 6957284371452496915, guid: f8c1944003d5c5f4ba0b2690f3e289f0, type: 3}
   prefabPickupClone: {fileID: 2459158020445263668, guid: f2ee46d61a71bd444b29c1904e19b238, type: 3}
