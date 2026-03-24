@@ -18,6 +18,13 @@ public class Lever : MonoBehaviour
             {
                 AttachedDoor.AbrirPuerta();
             }
+            else
+            {
+                foreach (PlomosBehaviour plomo in objetos)
+                {
+                    plomo.ResetPlomo();
+                }
+            }
         }
     }
     public void OnTriggerEnter2D(Collider2D collision)

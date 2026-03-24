@@ -82,7 +82,6 @@ public class PlayerMovement : MonoBehaviour
     {
         shootTimer += Time.deltaTime;
         dmgTimer += Time.deltaTime;
-        // Reducimos el timer de aturdimiento cada frame
         if (timerAturdimiento > 0)
         {
             timerAturdimiento -= Time.deltaTime;
@@ -102,8 +101,6 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
 
     {
-        // SI NO ESTAMOS ATURDIDOS: Controlamos la velocidad normalmente
-        // SI ESTAMOS ATURDIDOS: No tocamos el Rigidbody
         if (timerAturdimiento <= 0)
         {
             rb.linearVelocity = new Vector2(movimientoHorizontal, rb.linearVelocity.y);
