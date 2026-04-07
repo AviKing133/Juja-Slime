@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(SoloComprobarYCargar("Miguelito", "locura"));
+        StartCoroutine(SoloComprobarYCargar("user", "user"));
     }
 
     private IEnumerator SoloComprobarYCargar(string user, string pass)

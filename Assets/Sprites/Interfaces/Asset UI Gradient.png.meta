@@ -1,0 +1,2197 @@
+fileFormatVersion: 2
+guid: d9c0912dc78a54d4896b4b4bc6dffdc0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7804476712048839735
+    second: Asset UI Gradient_0
+  - first:
+      213: 2136393756478842657
+    second: Asset UI Gradient_1
+  - first:
+      213: -1062104778941135402
+    second: Asset UI Gradient_2
+  - first:
+      213: -8564634779801607390
+    second: Asset UI Gradient_3
+  - first:
+      213: -8553460652988746393
+    second: Asset UI Gradient_4
+  - first:
+      213: 7442876977750217302
+    second: Asset UI Gradient_5
+  - first:
+      213: 6487629905908162214
+    second: Asset UI Gradient_6
+  - first:
+      213: -7771232183872229148
+    second: Asset UI Gradient_7
+  - first:
+      213: 2228715044299033694
+    second: Asset UI Gradient_8
+  - first:
+      213: 3239723608598404522
+    second: Asset UI Gradient_9
+  - first:
+      213: -4602142221208248395
+    second: Asset UI Gradient_10
+  - first:
+      213: -1700559485293993668
+    second: Asset UI Gradient_11
+  - first:
+      213: -8808444371929793499
+    second: Asset UI Gradient_12
+  - first:
+      213: -6614421224528523991
+    second: Asset UI Gradient_13
+  - first:
+      213: 3995363896231861624
+    second: Asset UI Gradient_14
+  - first:
+      213: -3746712189963616112
+    second: Asset UI Gradient_15
+  - first:
+      213: 195646964950667948
+    second: Asset UI Gradient_16
+  - first:
+      213: 235382945436921937
+    second: Asset UI Gradient_17
+  - first:
+      213: -4270141742982991764
+    second: Asset UI Gradient_18
+  - first:
+      213: 8659839189233839070
+    second: Asset UI Gradient_19
+  - first:
+      213: 6113531729696104238
+    second: Asset UI Gradient_20
+  - first:
+      213: 9197246089536207980
+    second: Asset UI Gradient_21
+  - first:
+      213: 3316882822459791866
+    second: Asset UI Gradient_22
+  - first:
+      213: 2174794969049795888
+    second: Asset UI Gradient_23
+  - first:
+      213: -8986879225001397920
+    second: Asset UI Gradient_24
+  - first:
+      213: 8070312146463767863
+    second: Asset UI Gradient_25
+  - first:
+      213: 1853205954465484363
+    second: Asset UI Gradient_26
+  - first:
+      213: 918449757387448229
+    second: Asset UI Gradient_27
+  - first:
+      213: -4660657535692044597
+    second: Asset UI Gradient_28
+  - first:
+      213: -5363251826213085550
+    second: Asset UI Gradient_29
+  - first:
+      213: 5416435520309106328
+    second: Asset UI Gradient_30
+  - first:
+      213: -7298811160906029944
+    second: Asset UI Gradient_31
+  - first:
+      213: 6320577698777300944
+    second: Asset UI Gradient_32
+  - first:
+      213: -1902930087002610241
+    second: Asset UI Gradient_33
+  - first:
+      213: -7893839930200630470
+    second: Asset UI Gradient_34
+  - first:
+      213: -344491819973141774
+    second: Asset UI Gradient_35
+  - first:
+      213: 6033076116344314670
+    second: Asset UI Gradient_36
+  - first:
+      213: -5265306452034365554
+    second: Asset UI Gradient_37
+  - first:
+      213: -7380272175179994071
+    second: Asset UI Gradient_38
+  - first:
+      213: -3209058144568300724
+    second: Asset UI Gradient_39
+  - first:
+      213: -440326106957871683
+    second: Asset UI Gradient_40
+  - first:
+      213: -3902967797077999904
+    second: Asset UI Gradient_41
+  - first:
+      213: 6270501568176077035
+    second: Asset UI Gradient_42
+  - first:
+      213: 535827016740886908
+    second: Asset UI Gradient_43
+  - first:
+      213: -3288345903477852075
+    second: Asset UI Gradient_44
+  - first:
+      213: 2494364699599790
+    second: Asset UI Gradient_45
+  - first:
+      213: -5363826722451456129
+    second: Asset UI Gradient_46
+  - first:
+      213: -7369371849229789979
+    second: Asset UI Gradient_47
+  - first:
+      213: 6693882849571179762
+    second: Asset UI Gradient_48
+  - first:
+      213: 873906479165338949
+    second: Asset UI Gradient_49
+  - first:
+      213: -1103705907500334222
+    second: Asset UI Gradient_50
+  - first:
+      213: 8460711148316227280
+    second: Asset UI Gradient_51
+  - first:
+      213: 8650509908890107173
+    second: Asset UI Gradient_52
+  - first:
+      213: -1491322419055309388
+    second: Asset UI Gradient_53
+  - first:
+      213: 1607309001346720782
+    second: Asset UI Gradient_54
+  - first:
+      213: -8097935957954409347
+    second: Asset UI Gradient_55
+  - first:
+      213: 5904080260041542610
+    second: Asset UI Gradient_56
+  - first:
+      213: 4917209599461119241
+    second: Asset UI Gradient_57
+  - first:
+      213: -8583569722596142188
+    second: Asset UI Gradient_58
+  - first:
+      213: -4410789916295431180
+    second: Asset UI Gradient_59
+  - first:
+      213: -412100726926329493
+    second: Asset UI Gradient_60
+  - first:
+      213: -8016032142956029726
+    second: Asset UI Gradient_61
+  - first:
+      213: 8753685626527946196
+    second: Asset UI Gradient_62
+  - first:
+      213: 5022490016604789350
+    second: Asset UI Gradient_63
+  - first:
+      213: -4112922812111902377
+    second: Asset UI Gradient_64
+  - first:
+      213: -3871225604947393316
+    second: Asset UI Gradient_65
+  - first:
+      213: -3602848549806721237
+    second: Asset UI Gradient_66
+  - first:
+      213: 6288928023738811549
+    second: Asset UI Gradient_67
+  - first:
+      213: 7390340689276528608
+    second: Asset UI Gradient_68
+  - first:
+      213: 3124027415062611384
+    second: Asset UI Gradient_69
+  - first:
+      213: 4213663946439926708
+    second: Asset UI Gradient_70
+  - first:
+      213: 635880344503628257
+    second: Asset UI Gradient_71
+  - first:
+      213: 1770993459880596696
+    second: Asset UI Gradient_72
+  - first:
+      213: 7528711980267164616
+    second: Asset UI Gradient_73
+  - first:
+      213: -3946164388579969433
+    second: Asset UI Gradient_74
+  - first:
+      213: -9208373623811315993
+    second: Asset UI Gradient_75
+  - first:
+      213: -9072309575968921207
+    second: Asset UI Gradient_76
+  - first:
+      213: -7980280933757019452
+    second: Asset UI Gradient_77
+  - first:
+      213: 568037941412018230
+    second: Asset UI Gradient_78
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Asset UI Gradient_0
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 412
+        width: 90
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c33580c7cde0b390800000000000000
+      internalID: -7804476712048839735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_1
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 412
+        width: 90
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 127a84b6dcef5ad10800000000000000
+      internalID: 2136393756478842657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_2
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 411
+        width: 90
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d508f0b455a241f0800000000000000
+      internalID: -1062104778941135402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_3
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 422
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22328fe8b0e442980800000000000000
+      internalID: -8564634779801607390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_4
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 422
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7653352bad00c4980800000000000000
+      internalID: -8553460652988746393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_5
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 422
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6521cbd5d296a4760800000000000000
+      internalID: 7442876977750217302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_6
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 422
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ae5bd7c601b80a50800000000000000
+      internalID: 6487629905908162214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_7
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 422
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e07635a089072490800000000000000
+      internalID: -7771232183872229148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_8
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 422
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5c4309468cfdee10800000000000000
+      internalID: 2228715044299033694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_9
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 422
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aad54fc057fc5fc20800000000000000
+      internalID: 3239723608598404522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_10
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 380
+        width: 90
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bf1e037808e120c0800000000000000
+      internalID: -4602142221208248395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_11
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 380
+        width: 90
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3161a778266668e0800000000000000
+      internalID: -1700559485293993668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_12
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 379
+        width: 90
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52cf55b438e12c580800000000000000
+      internalID: -8808444371929793499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_13
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 406
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92d4c25e0fad434a0800000000000000
+      internalID: -6614421224528523991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_14
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 406
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87d12579b42627730800000000000000
+      internalID: 3995363896231861624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_15
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 406
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 090c7993d11010cc0800000000000000
+      internalID: -3746712189963616112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_16
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 406
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca29447c0e317b200800000000000000
+      internalID: 195646964950667948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_17
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 406
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 150f3f0ba8f344300800000000000000
+      internalID: 235382945436921937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_18
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 406
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c607eec75b86db4c0800000000000000
+      internalID: -4270141742982991764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_19
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 406
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edb2a4e5cdded2870800000000000000
+      internalID: 8659839189233839070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_20
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 390
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2f9d9f97b0a7d450800000000000000
+      internalID: 6113531729696104238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_21
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 390
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6cf7aed69e23af70800000000000000
+      internalID: 9197246089536207980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_22
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 390
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af99f4a7a5fe70e20800000000000000
+      internalID: 3316882822459791866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_23
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 390
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03d0585708c6e2e10800000000000000
+      internalID: 2174794969049795888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_24
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 390
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 061347a95f0384380800000000000000
+      internalID: -8986879225001397920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_25
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 390
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73d3e7c83228fff60800000000000000
+      internalID: 8070312146463767863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_26
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 390
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4ecd833ff8e7b910800000000000000
+      internalID: 1853205954465484363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_27
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 348
+        width: 90
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5af5f1d203dfebc00800000000000000
+      internalID: 918449757387448229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_28
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 348
+        width: 90
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc6045d1aa4025fb0800000000000000
+      internalID: -4660657535692044597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_29
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 374
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29e9a9931e6e195b0800000000000000
+      internalID: -5363251826213085550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_30
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 374
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89615d0886b0b2b40800000000000000
+      internalID: 5416435520309106328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_31
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 374
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8842a8f7be965ba90800000000000000
+      internalID: -7298811160906029944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_32
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 374
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0df70eedde337b750800000000000000
+      internalID: 6320577698777300944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_33
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 374
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb56ec30b2f6795e0800000000000000
+      internalID: -1902930087002610241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_34
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 358
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3bd8962862737290800000000000000
+      internalID: -7893839930200630470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_35
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 358
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fa1972d38e183bf0800000000000000
+      internalID: -344491819973141774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_36
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 358
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2b989163cac9b350800000000000000
+      internalID: 6033076116344314670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_37
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 358
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e875becbdafdde6b0800000000000000
+      internalID: -5265306452034365554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_38
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 358
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92c62bc1f81049990800000000000000
+      internalID: -7380272175179994071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_39
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 358
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4bae6dae922773d0800000000000000
+      internalID: -3209058144568300724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_40
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 358
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db502791db5a3e9f0800000000000000
+      internalID: -440326106957871683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_41
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 314
+        width: 127
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ee7065a77fd5d9c0800000000000000
+      internalID: -3902967797077999904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_42
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 342
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be83aa624fb450750800000000000000
+      internalID: 6270501568176077035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_43
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 342
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c79d5e135d3af6700800000000000000
+      internalID: 535827016740886908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_44
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 342
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 558779cb2d27d52d0800000000000000
+      internalID: -3288345903477852075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_45
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 312
+        width: 127
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea32cd98c9cd80000800000000000000
+      internalID: 2494364699599790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_46
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 304
+        width: 180
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7f7883c30cdf85b0800000000000000
+      internalID: -5363826722451456129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_47
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 282
+        width: 127
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e415e4095bbab990800000000000000
+      internalID: -7369371849229789979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_48
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 280
+        width: 127
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fc05c86cf275ec50800000000000000
+      internalID: 6693882849571179762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_49
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 284
+        width: 178
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 545ff89005db02c00800000000000000
+      internalID: 873906479165338949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_50
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 250
+        width: 127
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27341f62359dea0f0800000000000000
+      internalID: -1103705907500334222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_51
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 248
+        width: 127
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d6739e66fb7a6570800000000000000
+      internalID: 8460711148316227280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_52
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 263
+        width: 178
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52d34650ee8cc0870800000000000000
+      internalID: 8650509908890107173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_53
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 216
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bdc1a64922cd4be0800000000000000
+      internalID: -1491322419055309388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_54
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 216
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e042f85550f4e4610800000000000000
+      internalID: 1607309001346720782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_55
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 216
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7cc344a62a5e9f80800000000000000
+      internalID: -8097935957954409347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_56
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 176
+        width: 108
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2db0c2127b18fe150800000000000000
+      internalID: 5904080260041542610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_57
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 175
+        width: 108
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 905550604107d3440800000000000000
+      internalID: 4917209599461119241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_58
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 0
+        width: 267
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 493dbd3a0d801e880800000000000000
+      internalID: -8583569722596142188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_59
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 161
+        width: 109
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fbf554c0f9b9c2c0800000000000000
+      internalID: -4410789916295431180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_60
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 160
+        width: 107
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6930ef729ce74af0800000000000000
+      internalID: -412100726926329493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_61
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 146
+        width: 109
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e81efa9c3551c090800000000000000
+      internalID: -8016032142956029726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_62
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 145
+        width: 107
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d514a4c2b65b7970800000000000000
+      internalID: 8753685626527946196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_63
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 131
+        width: 109
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66a9caf4f0873b540800000000000000
+      internalID: 5022490016604789350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_64
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 130
+        width: 107
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 759287b5e76fbe6c0800000000000000
+      internalID: -4112922812111902377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_65
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 116
+        width: 108
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd4c6bba2d4a64ac0800000000000000
+      internalID: -3871225604947393316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_66
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 115
+        width: 107
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b273d39255c100ec0800000000000000
+      internalID: -3602848549806721237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_67
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 101
+        width: 108
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9483f8a7b2c64750800000000000000
+      internalID: 6288928023738811549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_68
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 100
+        width: 108
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e7617183b3cf8660800000000000000
+      internalID: 7390340689276528608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_69
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 87
+        width: 108
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b58367d166ca5b20800000000000000
+      internalID: 3124027415062611384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_70
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 85
+        width: 109
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b32c6ac801f97a30800000000000000
+      internalID: 4213663946439926708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_71
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 72
+        width: 109
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e1bac5edc913d800800000000000000
+      internalID: 635880344503628257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_72
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 70
+        width: 109
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d419bb2b25d39810800000000000000
+      internalID: 1770993459880596696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_73
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 57
+        width: 109
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c35d0048ab5b7860800000000000000
+      internalID: 7528711980267164616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_74
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 55
+        width: 109
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 766f46175686c39c0800000000000000
+      internalID: -3946164388579969433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_75
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 42
+        width: 109
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e666a92af8453080800000000000000
+      internalID: -9208373623811315993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_76
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 40
+        width: 108
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9896ffff18ea81280800000000000000
+      internalID: -9072309575968921207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_77
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 27
+        width: 108
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ca1797a5c8504190800000000000000
+      internalID: -7980280933757019452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset UI Gradient_78
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 25
+        width: 108
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 638bec48f7312e700800000000000000
+      internalID: 568037941412018230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Asset UI Gradient_0: -7804476712048839735
+      Asset UI Gradient_1: 2136393756478842657
+      Asset UI Gradient_10: -4602142221208248395
+      Asset UI Gradient_11: -1700559485293993668
+      Asset UI Gradient_12: -8808444371929793499
+      Asset UI Gradient_13: -6614421224528523991
+      Asset UI Gradient_14: 3995363896231861624
+      Asset UI Gradient_15: -3746712189963616112
+      Asset UI Gradient_16: 195646964950667948
+      Asset UI Gradient_17: 235382945436921937
+      Asset UI Gradient_18: -4270141742982991764
+      Asset UI Gradient_19: 8659839189233839070
+      Asset UI Gradient_2: -1062104778941135402
+      Asset UI Gradient_20: 6113531729696104238
+      Asset UI Gradient_21: 9197246089536207980
+      Asset UI Gradient_22: 3316882822459791866
+      Asset UI Gradient_23: 2174794969049795888
+      Asset UI Gradient_24: -8986879225001397920
+      Asset UI Gradient_25: 8070312146463767863
+      Asset UI Gradient_26: 1853205954465484363
+      Asset UI Gradient_27: 918449757387448229
+      Asset UI Gradient_28: -4660657535692044597
+      Asset UI Gradient_29: -5363251826213085550
+      Asset UI Gradient_3: -8564634779801607390
+      Asset UI Gradient_30: 5416435520309106328
+      Asset UI Gradient_31: -7298811160906029944
+      Asset UI Gradient_32: 6320577698777300944
+      Asset UI Gradient_33: -1902930087002610241
+      Asset UI Gradient_34: -7893839930200630470
+      Asset UI Gradient_35: -344491819973141774
+      Asset UI Gradient_36: 6033076116344314670
+      Asset UI Gradient_37: -5265306452034365554
+      Asset UI Gradient_38: -7380272175179994071
+      Asset UI Gradient_39: -3209058144568300724
+      Asset UI Gradient_4: -8553460652988746393
+      Asset UI Gradient_40: -440326106957871683
+      Asset UI Gradient_41: -3902967797077999904
+      Asset UI Gradient_42: 6270501568176077035
+      Asset UI Gradient_43: 535827016740886908
+      Asset UI Gradient_44: -3288345903477852075
+      Asset UI Gradient_45: 2494364699599790
+      Asset UI Gradient_46: -5363826722451456129
+      Asset UI Gradient_47: -7369371849229789979
+      Asset UI Gradient_48: 6693882849571179762
+      Asset UI Gradient_49: 873906479165338949
+      Asset UI Gradient_5: 7442876977750217302
+      Asset UI Gradient_50: -1103705907500334222
+      Asset UI Gradient_51: 8460711148316227280
+      Asset UI Gradient_52: 8650509908890107173
+      Asset UI Gradient_53: -1491322419055309388
+      Asset UI Gradient_54: 1607309001346720782
+      Asset UI Gradient_55: -8097935957954409347
+      Asset UI Gradient_56: 5904080260041542610
+      Asset UI Gradient_57: 4917209599461119241
+      Asset UI Gradient_58: -8583569722596142188
+      Asset UI Gradient_59: -4410789916295431180
+      Asset UI Gradient_6: 6487629905908162214
+      Asset UI Gradient_60: -412100726926329493
+      Asset UI Gradient_61: -8016032142956029726
+      Asset UI Gradient_62: 8753685626527946196
+      Asset UI Gradient_63: 5022490016604789350
+      Asset UI Gradient_64: -4112922812111902377
+      Asset UI Gradient_65: -3871225604947393316
+      Asset UI Gradient_66: -3602848549806721237
+      Asset UI Gradient_67: 6288928023738811549
+      Asset UI Gradient_68: 7390340689276528608
+      Asset UI Gradient_69: 3124027415062611384
+      Asset UI Gradient_7: -7771232183872229148
+      Asset UI Gradient_70: 4213663946439926708
+      Asset UI Gradient_71: 635880344503628257
+      Asset UI Gradient_72: 1770993459880596696
+      Asset UI Gradient_73: 7528711980267164616
+      Asset UI Gradient_74: -3946164388579969433
+      Asset UI Gradient_75: -9208373623811315993
+      Asset UI Gradient_76: -9072309575968921207
+      Asset UI Gradient_77: -7980280933757019452
+      Asset UI Gradient_78: 568037941412018230
+      Asset UI Gradient_8: 2228715044299033694
+      Asset UI Gradient_9: 3239723608598404522
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

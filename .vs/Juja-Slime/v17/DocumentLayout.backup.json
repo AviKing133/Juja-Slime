@@ -11,12 +11,12 @@
       "RelativeMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|C:\\Users\\carus\\Juja-Slime\\assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|C:\\Users\\carus\\Juja-Slime\\assets\\scripts\\lever.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\lever.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|C:\\Users\\carus\\Juja-Slime\\assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|C:\\Users\\carus\\Juja-Slime\\assets\\scripts\\plomosbehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -80,14 +80,14 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
               "ToolTip": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\GameManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAAAGcAAABfAAAAAAAAAA==",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAgwIMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-24T07:36:18.002Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Lever.cs",
               "DocumentMoniker": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\Lever.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Lever.cs",
@@ -95,7 +95,8 @@
               "RelativeToolTip": "Assets\\Scripts\\Lever.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-25T15:23:18.01Z"
+              "WhenOpened": "2026-02-25T15:23:18.01Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -183,7 +184,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "PlayerMovement.cs",
               "DocumentMoniker": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\PlayerMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerMovement.cs",
@@ -225,9 +226,10 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Door.cs",
               "ToolTip": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\Door.cs",
               "RelativeToolTip": "Assets\\Scripts\\Door.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwCkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-25T15:16:20.815Z"
+              "WhenOpened": "2026-02-25T15:16:20.815Z",
+              "EditorCaption": ""
             }
           ]
         },

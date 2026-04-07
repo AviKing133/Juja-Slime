@@ -26377,8 +26377,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0542f037b8a99b84cbc79d71cc67eaef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  urlApi: http://localhost:5055
+  urlApi: https://api-jujaslime.onrender.com/api/Auth
   jugadorActivo:
+    id: 0
     username: 
     nivelActual: 0
 --- !u!4 &1825658428

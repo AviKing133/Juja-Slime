@@ -80,7 +80,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
               "ToolTip": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\GameManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
-              "ViewState": "AgIAAGIAAAAAAAAAAAAgwIMAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAAwCQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-24T07:36:18.002Z",
               "EditorCaption": ""
@@ -95,8 +95,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Lever.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-25T15:23:18.01Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-25T15:23:18.01Z"
             },
             {
               "$type": "Document",
@@ -228,8 +227,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Door.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAQwCkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-25T15:16:20.815Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-25T15:16:20.815Z"
             }
           ]
         },
