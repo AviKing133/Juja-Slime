@@ -3,6 +3,7 @@ using UnityEngine.Networking;
 using System.Collections;
 using UnityEngine.SceneManagement;
 using System.Text;
+using TMPro;
 
 [System.Serializable]
 public class UpdateNivelRequest
@@ -31,6 +32,7 @@ public class LoginRequest { public string username; public string password; }
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; set; }
+    public TMP_Text feedbackText;
 
     [Header("Configuración API")]
     public string urlApi = "https://localhost:7164/api/auth";
@@ -98,7 +100,7 @@ public class GameManager : MonoBehaviour
         LoginRequest datos = new LoginRequest { username = user, password = pass };
         string json = JsonUtility.ToJson(datos);
 
-        using (UnityWebRequest request = new UnityWebRequest(urlApi + "/Auth/register", "POST"))
+        using (UnityWebRequest request = new UnityWebRequest(urlApi + "/register", "POST"))
         {
             byte[] bodyRaw = Encoding.UTF8.GetBytes(json);
             request.uploadHandler = new UploadHandlerRaw(bodyRaw);
@@ -142,8 +144,12 @@ public class GameManager : MonoBehaviour
     // Método auxiliar para feedback visual al usuario
     void MostrarMensajeEnPantalla(string msg)
     {
-        // Aquí podrías asignar el texto a un objeto de UI Text
         Debug.Log("<color=red>FEEDBACK:</color> " + msg);
+        if (feedbackText != null)
+        {
+            feedbackText.text = msg;
+            feedbackText.gameObject.SetActive(true);
+        }
     }
     public void GuardarProgreso(int proximoNivel)
     {
