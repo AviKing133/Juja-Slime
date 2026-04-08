@@ -793,7 +793,7 @@ Transform:
   m_GameObject: {fileID: 993444346}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -42.31, y: 39.15, z: -10}
+  m_LocalPosition: {x: -42.31, y: 37.4, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -815,7 +815,7 @@ MonoBehaviour:
   smoothTimeCerca: 0.5
   maxSpeed: 20
   playerOriginal: {fileID: 1512406116}
-  offset: {x: 0, y: 3.5, z: -10}
+  offset: {x: 0, y: 1.5, z: -10}
   lookAheadX: 3
   lookAheadYUp: 2
   lookAheadYDown: 5
@@ -26348,55 +26348,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3172896284714238563, guid: 1449360ed1c95824dac22ecc327f2c7e, type: 3}
   m_PrefabInstance: {fileID: 2095763502}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1825658426
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1825658428}
-  - component: {fileID: 1825658427}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1825658427
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1825658426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0542f037b8a99b84cbc79d71cc67eaef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  urlApi: https://api-jujaslime.onrender.com/api/Auth
-  jugadorActivo:
-    id: 0
-    username: 
-    nivelActual: 0
---- !u!4 &1825658428
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1825658426}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -27.971914, y: 32.99794, z: -0.23414873}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1830549211
 GameObject:
   m_ObjectHideFlags: 0
@@ -27080,7 +27031,6 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1825658428}
   - {fileID: 993444349}
   - {fileID: 1761547277}
   - {fileID: 1631020026}

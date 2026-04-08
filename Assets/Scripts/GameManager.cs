@@ -12,6 +12,12 @@ public class UpdateNivelRequest
 }
 
 [System.Serializable]
+public class ErrorResponse
+{
+    public string message;
+}
+
+[System.Serializable]
 public class PlayerData
 {
     public int id;
@@ -20,7 +26,7 @@ public class PlayerData
 }
 
 [System.Serializable]
-public class LoginRequest { public string Username; public string Password; }
+public class LoginRequest { public string username; public string password; }
 
 public class GameManager : MonoBehaviour
 {
@@ -46,12 +52,12 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(SoloComprobarYCargar("user", "user"));
+
     }
 
-    private IEnumerator SoloComprobarYCargar(string user, string pass)
+    public IEnumerator CargarJuego(string user, string pass)
     {
-        LoginRequest datos = new LoginRequest { Username = user, Password = pass };
+        LoginRequest datos = new LoginRequest { username = user, password = pass };
         string json = JsonUtility.ToJson(datos);
 
         using (UnityWebRequest request = new UnityWebRequest(urlApi + "/login", "POST"))
@@ -68,7 +74,6 @@ public class GameManager : MonoBehaviour
                 string respuestaCruda = request.downloadHandler.text;
                 Debug.Log("<color=orange>JSON RECIBIDO DE LA API:</color> " + respuestaCruda);
 
-                // --- CLAVE: Guardamos los datos en jugadorActivo ---
                 jugadorActivo = JsonUtility.FromJson<PlayerData>(respuestaCruda);
 
                 Debug.Log($"<color=green>RESULTADO UNITY:</color> {jugadorActivo.username} está en nivel {jugadorActivo.nivelActual}");
@@ -88,6 +93,58 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public IEnumerator RegistrarUsuario(string user, string pass)
+    {
+        LoginRequest datos = new LoginRequest { username = user, password = pass };
+        string json = JsonUtility.ToJson(datos);
+
+        using (UnityWebRequest request = new UnityWebRequest(urlApi + "/Auth/register", "POST"))
+        {
+            byte[] bodyRaw = Encoding.UTF8.GetBytes(json);
+            request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+            request.downloadHandler = new DownloadHandlerBuffer();
+            request.SetRequestHeader("Content-Type", "application/json");
+
+            yield return request.SendWebRequest();
+
+            if (request.result == UnityWebRequest.Result.Success)
+            {
+                Debug.Log("<color=green>¡Usuario creado!</color>");
+            }
+            else
+            {
+                // 1. Manejo por código numérico
+                if (request.responseCode == 409)
+                {
+                    MostrarMensajeEnPantalla("El usuario ya está registrado.");
+                }
+                else if (request.responseCode == 400)
+                {
+                    // 2. Intentar leer detalle del JSON
+                    try
+                    {
+                        var error = JsonUtility.FromJson<ErrorResponse>(request.downloadHandler.text);
+                        MostrarMensajeEnPantalla("Error: " + error.message);
+                    }
+                    catch
+                    {
+                        MostrarMensajeEnPantalla("Datos inválidos.");
+                    }
+                }
+                else
+                {
+                    MostrarMensajeEnPantalla("Error de conexión: " + request.error);
+                }
+            }
+        }
+    }
+
+    // Método auxiliar para feedback visual al usuario
+    void MostrarMensajeEnPantalla(string msg)
+    {
+        // Aquí podrías asignar el texto a un objeto de UI Text
+        Debug.Log("<color=red>FEEDBACK:</color> " + msg);
+    }
     public void GuardarProgreso(int proximoNivel)
     {
         if (jugadorActivo != null && !string.IsNullOrEmpty(jugadorActivo.username))

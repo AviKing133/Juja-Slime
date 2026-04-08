@@ -23,7 +23,6 @@ public class PickupController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rebotesRestantes = rebotesMaximos;
 
-        // Impulso inicial si es un clon para que no caiga estático
         if (gameObject.CompareTag("pickupClone"))
         {
             rb.AddForce(new Vector2(Random.Range(-1f, 1f), 2f), ForceMode2D.Impulse);
