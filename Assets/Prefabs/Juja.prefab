@@ -42,9 +42,9 @@ GameObject:
   - component: {fileID: 5914576479220014889}
   - component: {fileID: 118274203151388831}
   - component: {fileID: 4945090875335157584}
-  - component: {fileID: 5390425498948437616}
   - component: {fileID: -453061903457405718}
-  - component: {fileID: 321965980712567768}
+  - component: {fileID: 3839541182016952418}
+  - component: {fileID: 3946271359481442876}
   m_Layer: 0
   m_Name: Juja
   m_TagString: player
@@ -62,10 +62,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.9699, y: -1.8575, z: 0}
-  m_LocalScale: {x: 6, y: 6, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4796156026945780785}
+  - {fileID: 7109132401827055995}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &118274203151388831
@@ -112,7 +113,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 130
-  m_Sprite: {fileID: 3225832317793331946, guid: 4682a7bf8df91d2489e355230666e047, type: 3}
+  m_Sprite: {fileID: 5007486496937631178, guid: 9a6e8e585454dd34aae7419c2d0e125c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -150,38 +151,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &5390425498948437616
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 946471395666377227}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86a71968e0cfc3048b14d0a39990fa7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  capasObstaculos:
-    serializedVersion: 2
-    m_Bits: 64
-  distanciaSpawn: 1.2
-  escalaBaseOriginal: 4
-  valorMasaClon: 3
-  valorPorBala: 0.5
-  esElOriginal: 1
-  cloneIsAvailable: 1
-  ammo: 3
-  mirandoDerecha: 1
-  enSuelo: 0
-  velocidad: 6
-  fuerzaSalto: 6
-  Interface: {fileID: 0}
-  prefabBullet: {fileID: 2854155865946665790, guid: a1f4db034a688b2449f66614ad286323, type: 3}
-  prefabClone: {fileID: 6957284371452496915, guid: f8c1944003d5c5f4ba0b2690f3e289f0, type: 3}
-  prefabPickupClone: {fileID: 2459158020445263668, guid: f2ee46d61a71bd444b29c1904e19b238, type: 3}
-  shootPoint: {fileID: 4796156026945780785}
-  anim: {fileID: 0}
 --- !u!95 &-453061903457405718
 Animator:
   serializedVersion: 7
@@ -192,7 +161,7 @@ Animator:
   m_GameObject: {fileID: 946471395666377227}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6723240c0ba91b4468cfb18f2edc2701, type: 2}
+  m_Controller: {fileID: 9100000, guid: 00e57bf9b480629408710380998ee368, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -204,7 +173,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!60 &321965980712567768
+--- !u!60 &3839541182016952418
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -214,7 +183,7 @@ PolygonCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 76d528e3870617f4a80921fe970444fb, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -242,7 +211,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.21, y: 0.18}
+    oldSize: {x: 0.64, y: 0.64}
     newSize: {x: 0.21, y: 0.18}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -250,18 +219,81 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.07629512, y: 0.04725245}
-      - {x: -0.090350345, y: 0.011250965}
-      - {x: -0.09589625, y: -0.015320629}
-      - {x: -0.09253053, y: -0.04988067}
-      - {x: -0.0716405, y: -0.06453987}
-      - {x: -0.05507221, y: -0.06744452}
-      - {x: 0.06294812, y: -0.06730025}
-      - {x: 0.08505506, y: -0.053434137}
-      - {x: 0.09528028, y: -0.016533244}
-      - {x: 0.08288335, y: 0.025684327}
-      - {x: 0.06291756, y: 0.057664637}
-      - {x: 0.03403683, y: 0.08004596}
-      - {x: -0.02961786, y: 0.07996409}
-      - {x: -0.055654705, y: 0.06916092}
+    - - {x: -0.08260262, y: -0.057182092}
+      - {x: -0.18651654, y: -0.16892374}
+      - {x: -0.17477478, y: -0.3258708}
+      - {x: 0.1647748, y: -0.32391387}
+      - {x: 0.17260262, y: -0.14109609}
+      - {x: 0.09021521, y: -0.041526455}
   m_UseDelaunayMesh: 0
+--- !u!114 &3946271359481442876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946471395666377227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6fa932a36050274ea1f8d206d31174d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  esElOriginal: 1
+  estadoActual: 0
+  velocidad: 6
+  mirandoDerecha: 1
+  fuerzaMinima: 5
+  fuerzaMaxima: 18
+  tiempoCargaMax: 1.2
+  anguloSalto: {x: 0.5, y: 1}
+  escalaActual: 3
+  perdidaPorClon: 0.5
+  perdidaPorBala: 0.2
+  escalaMinima: 1
+  prefabClone: {fileID: 6957284371452496915, guid: f8c1944003d5c5f4ba0b2690f3e289f0, type: 3}
+  prefabPickupClone: {fileID: 2459158020445263668, guid: f2ee46d61a71bd444b29c1904e19b238, type: 3}
+  cloneIsAvailable: 1
+  distanciaSpawn: 0.8
+  capasObstaculos:
+    serializedVersion: 2
+    m_Bits: 64
+  controladorGolpe: {fileID: 7109132401827055995}
+  radioGolpe: 1
+  "da\xF1oMelee": 1
+  cadenciaMelee: 0.6
+  capaEnemigos:
+    serializedVersion: 2
+    m_Bits: 0
+  anim: {fileID: 0}
+  Interface: {fileID: 0}
+--- !u!1 &3510186242139057535
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7109132401827055995}
+  m_Layer: 0
+  m_Name: MeleeHitbox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7109132401827055995
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3510186242139057535}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: -0.221, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5914576479220014889}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

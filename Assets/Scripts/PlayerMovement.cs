@@ -59,7 +59,6 @@ public class PlayerMovement : MonoBehaviour
     private float dmgTimer = 0f;
     private float dmgCooldown = 1.5f;
     private float shootTimer = 0f;
-    private float shootCooldown = 0.5f;
     public bool haveDamage = false;
     private void Awake()
 
