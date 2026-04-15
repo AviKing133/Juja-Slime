@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -6,8 +7,8 @@ public class PlayerController : MonoBehaviour
     public enum SlimeState
     {
         Spawn = 0, Idle = 1, Movement = 2, PreCharge = 3, Charge = 4,
-        Jump = 5, FallingAir = 6, MeleeAttack = 7, Shoot = 8, Hit = 9,
-        Death = 10, Despawn = 11, Falling = 12
+        Jump = 5, FallingAir = 6, MeleeAttack = 7, Clon = 8, Hit = 9,
+        Death = 10, Despawn = 11, Falling = 12, Shoot = 13
     }
 
     public static PlayerController instance;
@@ -22,6 +23,12 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private float inputHorizontal;
     private bool enSuelo = false;
+    
+    [Header("Ataque")]
+    public RangedController rangedController;
+    public float tiempoUltimoDisparo;
+    public float cadenciaRanged;
+    public int ammo;
 
     [Header("Configuración Salto Cargado")]
     public float fuerzaMinima = 5f;
@@ -48,7 +55,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask capasObstaculos;
 
     [Header("Configuración Melee")]
-    public Transform controladorGolpe; // Un objeto vacío frente al Slime
+    public GameObject hitboxMelee;    // Un objeto vacío con un CircleCollider2D marcado como Trigger
     public float radioGolpe = 0.5f;    // Tamaño de la hitbox circular
     public float dañoMelee = 10f;
     public float cadenciaMelee = 0.6f;
@@ -70,7 +77,6 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
-
     void Start()
     {
         Interface = FindFirstObjectByType<InterfaceBehaviour>();
@@ -90,7 +96,6 @@ public class PlayerController : MonoBehaviour
 
         ActualizarEscala();
     }
-
     void Update()
     {
         // 1. Si estamos en Spawn, esperamos a que termine para pasar a Idle
@@ -113,7 +118,6 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(SecuenciaSpawnClon());
         }
     }
-
     void FixedUpdate()
     {
         if (PuedeMoverse())
@@ -121,7 +125,6 @@ public class PlayerController : MonoBehaviour
             rb.linearVelocity = new Vector2(inputHorizontal * velocidad, rb.linearVelocity.y);
         }
     }
-
     private void OnCollisionStay2D(Collision2D collision)
     {
         // Usamos Stay por si el Slime aterriza y se queda quieto, 
@@ -131,7 +134,6 @@ public class PlayerController : MonoBehaviour
             enSuelo = true;
         }
     }
-
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("ground"))
@@ -139,7 +141,6 @@ public class PlayerController : MonoBehaviour
             enSuelo = false;
         }
     }
-
     private void ManejarLogicaSpawn()
     {
         // Aquí puedes detectar si la animación de Spawn terminó
@@ -151,7 +152,6 @@ public class PlayerController : MonoBehaviour
             CambiarEstado(SlimeState.Idle);
         }
     }
-
     private void ManejarInput()
     {
         float h = 0;
@@ -159,25 +159,36 @@ public class PlayerController : MonoBehaviour
         // --- MOVIMIENTO DIFERENCIADO ---
         if (esElOriginal)
         {
-            if (Input.GetKey(KeyCode.D) && !estaCargando && enSuelo) h = 1;
-            else if (Input.GetKey(KeyCode.A) && !estaCargando && enSuelo) h = -1;
+            if (Input.GetKey(KeyCode.D) && !estaCargando) h = 1;
+            else if (Input.GetKey(KeyCode.A) && !estaCargando) h = -1;
 
             inputHorizontal = h;
+
+            if (Input.GetKey(KeyCode.F) && enSuelo && !estaCargando && cloneIsAvailable)
+            {
+                CambiarEstado(SlimeState.Clon);
+            }
         }
         else
         {
-            if (Input.GetKey(KeyCode.RightArrow) && !estaCargando && enSuelo) h = 1;
-            else if (Input.GetKey(KeyCode.LeftArrow) && !estaCargando && enSuelo) h = -1;
+            if (Input.GetKey(KeyCode.RightArrow) && !estaCargando) h = 1;
+            else if (Input.GetKey(KeyCode.LeftArrow) && !estaCargando) h = -1;
 
             inputHorizontal = h;
         }
         
-        KeyCode teclaMelee = esElOriginal ? KeyCode.Q : KeyCode.LeftShift;
+        KeyCode teclaMelee = esElOriginal ? KeyCode.Q : KeyCode.RightControl;
+        KeyCode teclaRanged = esElOriginal ? KeyCode.E : KeyCode.RightShift;
 
-        if (Input.GetKeyDown(teclaMelee) && Time.time > tiempoUltimoMelee + cadenciaMelee && enSuelo)
+        if (Input.GetKeyDown(teclaMelee) && Time.time > tiempoUltimoMelee + cadenciaMelee && enSuelo && h == 0)
         {
             tiempoUltimoMelee = Time.time;
             StartCoroutine(SecuenciaMelee());
+        }
+        if (Input.GetKeyDown(teclaRanged) && Time.time > tiempoUltimoDisparo + cadenciaRanged)
+        {
+            tiempoUltimoMelee = Time.time;
+            StartCoroutine(SecuenciaDisparo());
         }
 
         // --- LÓGICA DE SALTO CARGADO (PreCharge -> Charge -> Jump) ---
@@ -246,15 +257,14 @@ public class PlayerController : MonoBehaviour
             else if (inputHorizontal < 0 && mirandoDerecha) Girar();
         }
     }
-
     private void DeterminarEstadoFisico()
     {
         if (estaCargando) return;
 
         // 1. Bloqueos críticos (Solo estados que duran hasta que el código diga lo contrario)
         // HE QUITADO MeleeAttack de aquí para que el código pueda sacarlo de ese estado
-        if (estadoActual == SlimeState.Shoot || estadoActual == SlimeState.Spawn ||
-            estadoActual == SlimeState.Hit)
+        if (estadoActual == SlimeState.Clon || estadoActual == SlimeState.Spawn ||
+            estadoActual == SlimeState.Hit || estadoActual == SlimeState.Shoot)
             return;
 
         // 2. Lógica de AIRE
@@ -317,16 +327,7 @@ public class PlayerController : MonoBehaviour
     }
     private void RealizarAtaqueMelee()
     {
-        // Creamos una "esfera" invisible que detecta colliders
-        Collider2D[] objetosGolpeados = Physics2D.OverlapCircleAll(controladorGolpe.position, radioGolpe, capaEnemigos);
-
-        foreach (Collider2D enemigo in objetosGolpeados)
-        {
-            // Aquí llamarías al sistema de daño del enemigo
-            Debug.Log("Golpeaste a: " + enemigo.name);
-
-            // Ejemplo: enemigo.GetComponent<Enemigo>().RecibirDaño(dañoMelee);
-        }
+        hitboxMelee.SetActive(true);
     }
     public void ActualizarEscala()
     {
@@ -337,16 +338,35 @@ public class PlayerController : MonoBehaviour
         float direccionX = mirandoDerecha ? 1 : -1;
         transform.localScale = new Vector3(escalaActual * direccionX, escalaActual, 1);
     }
-
     public void Clonarse()
     {
-        if (Input.GetKeyDown(KeyCode.F) && cloneIsAvailable && enSuelo && !estaCargando && esElOriginal)
-        {
-            StartCoroutine(SecuenciaSpawnClon());
-        }
+        cloneIsAvailable = false;
+        StartCoroutine(SecuenciaSpawnClon());
     }
 
     // Corrutinas
+    private IEnumerator SecuenciaDisparo()
+    {
+        CambiarEstado(SlimeState.Shoot);
+        ActualizarAnimator();
+
+        if (rangedController != null)
+        {
+            rangedController.OrderFire();
+        }
+
+        // REDUCE este tiempo para probar. Si es muy largo, parecerá que está lockeado.
+        yield return new WaitForSeconds(0.3f);
+
+        // FUERZA el regreso a un estado que NO esté en la lista de exclusión
+        if (Mathf.Abs(inputHorizontal) > 0.1f)
+            CambiarEstado(SlimeState.Movement);
+        else
+            CambiarEstado(SlimeState.Idle);
+
+        // MUY IMPORTANTE: Notifica al Animator el cambio de vuelta
+        ActualizarAnimator();
+    }
     private IEnumerator SecuenciaMelee()
     {
         CambiarEstado(SlimeState.MeleeAttack);
@@ -361,6 +381,8 @@ public class PlayerController : MonoBehaviour
             CambiarEstado(SlimeState.Movement);
         else
             CambiarEstado(SlimeState.Idle);
+
+        hitboxMelee.SetActive(false);
     }
     IEnumerator SecuenciaSpawnClon()
     {
@@ -421,7 +443,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // 4. Avisar al original que ya puede spawnear otro y morir
-        if (PlayerMovement.instance != null) PlayerMovement.instance.cloneIsAvailable = true;
+        if (PlayerController.instance != null) PlayerController.instance.cloneIsAvailable = true;
         Destroy(gameObject);
     }
 

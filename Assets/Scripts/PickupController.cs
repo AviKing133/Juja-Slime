@@ -32,7 +32,7 @@ public class PickupController : MonoBehaviour
     void LateUpdate()
     {
         // Evitar que el jugador recoja si ya está lleno de munición (solo para balas sueltas)
-        if (PlayerMovement.instance.ammo >= 3 && gameObject.CompareTag("bullet"))
+        if (PlayerController.instance.ammo >= 3 && gameObject.CompareTag("bullet"))
         {
             col.isTrigger = true;
         }
@@ -57,7 +57,7 @@ public class PickupController : MonoBehaviour
         // --- LÓGICA DE RECOLECCIÓN ---
         if (collision.gameObject.CompareTag("player") || collision.gameObject.CompareTag("clone"))
         {
-            PlayerMovement player = collision.gameObject.GetComponent<PlayerMovement>();
+            PlayerController player = collision.gameObject.GetComponent<PlayerController>();
             if (player == null) return;
 
             // Caso A: Es una bala

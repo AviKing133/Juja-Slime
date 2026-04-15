@@ -58,25 +58,25 @@ public class BossController : MonoBehaviour
         Move();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("player"))
-        {
-            PlayerMovement player = collision.gameObject.GetComponent<PlayerMovement>();
-            if (player.haveDamage && health >= 1)
-            {
-                player.haveDamage = false;
-                GetStunned();
-                health -= 1;
-            }
-            else if (player.haveDamage && health < 1)
-            {
-                Destroy(gameObject);
-            }
-        }
-        if (collision.gameObject.CompareTag("bullet") || collision.gameObject.CompareTag("pickupClone"))
-        {
-            Destroy(collision.gameObject);
-        }
-    }
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.CompareTag("player"))
+    //    {
+    //        PlayerController player = collision.gameObject.GetComponent<PlayerController>();
+    //        if (player.haveDamage && health >= 1)
+    //        {
+    //            player.haveDamage = false;
+    //            GetStunned();
+    //            health -= 1;
+    //        }
+    //        else if (player.haveDamage && health < 1)
+    //        {
+    //            Destroy(gameObject);
+    //        }
+    //    }
+    //    if (collision.gameObject.CompareTag("bullet") || collision.gameObject.CompareTag("pickupClone"))
+    //    {
+    //        Destroy(collision.gameObject);
+    //    }
+    //}
 }

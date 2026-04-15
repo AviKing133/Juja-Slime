@@ -35,7 +35,7 @@ public class CameraController : MonoBehaviour
         if (targetActual == null) return;
 
         Rigidbody2D rb = targetActual.GetComponent<Rigidbody2D>();
-        PlayerMovement scriptMov = targetActual.GetComponent<PlayerMovement>();
+        PlayerController scriptMov = targetActual.GetComponent<PlayerController>();
 
         Vector3 desplazamiento = Vector3.zero;
 
@@ -70,8 +70,8 @@ public class CameraController : MonoBehaviour
 
     void GestionarPrioridadTarget()
     {
-        PlayerMovement[] todos = Object.FindObjectsByType<PlayerMovement>(FindObjectsSortMode.None);
-        PlayerMovement clon = null;
+        PlayerController[] todos = Object.FindObjectsByType<PlayerController>(FindObjectsSortMode.None);
+        PlayerController clon = null;
         foreach (var p in todos) { if (!p.esElOriginal) clon = p; }
 
         if (clon == null)
