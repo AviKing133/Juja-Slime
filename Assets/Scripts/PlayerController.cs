@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -23,7 +24,8 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private float inputHorizontal;
     private bool enSuelo = false;
-    
+    private bool esInvulnerable = false;
+
     [Header("Ataque")]
     public RangedController rangedController;
     public float tiempoUltimoDisparo;
@@ -65,6 +67,20 @@ public class PlayerController : MonoBehaviour
     [Header("Referencias")]
     public Animator anim;
     public InterfaceBehaviour Interface;
+    public AudioSource audioSourceWalk;
+    public AudioSource audioSourceEffects;
+
+    // ClipsAudio
+    public AudioClip cargarSalto;
+    public AudioClip jumpRelease;
+    public AudioClip melee;
+    public AudioClip shoot;
+    public AudioClip walk;
+    public AudioClip impact;
+    public AudioClip spawn;
+    public AudioClip despawn;
+    public AudioClip hit;
+
 
     void Awake()
     {
@@ -79,8 +95,12 @@ public class PlayerController : MonoBehaviour
     }
     void Start()
     {
+        audioSourceWalk = GetComponent<AudioSource>();
+        audioSourceWalk.clip = walk;
         Interface = FindFirstObjectByType<InterfaceBehaviour>();
 
+        // Sonido Spawn
+        audioSourceEffects.PlayOneShot(spawn);
         if (esElOriginal)
         {
             anim.SetBool("IsAlive", false);
@@ -89,7 +109,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             // EL CLON: Empieza vivo directamente al ser instanciado por el ataque
-            anim.SetBool("IsAlive", true);
+            anim.SetBool("IsAlive", false);
             CambiarEstado(SlimeState.Idle);
             StartCoroutine(CicloDeVidaClon());
         }
@@ -134,6 +154,23 @@ public class PlayerController : MonoBehaviour
             enSuelo = true;
         }
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("ground"))
+        {
+            audioSourceEffects.PlayOneShot(impact);
+            enSuelo = true;
+        }
+        if (collision.gameObject.CompareTag("enemy") && ammo >= 1 && !esInvulnerable)
+        {
+            ammo -= 1;
+            StartCoroutine(SecuenciaHit());
+        }
+        else if (collision.gameObject.CompareTag("enemy") && ammo < 1 && !esInvulnerable)
+        {
+            CambiarEstado(SlimeState.Death);
+        }
+    }
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("ground"))
@@ -154,14 +191,29 @@ public class PlayerController : MonoBehaviour
     }
     private void ManejarInput()
     {
+        // Sonido de caminar
         float h = 0;
+        if (estadoActual == SlimeState.Movement && enSuelo && Math.Abs(inputHorizontal) > 0.1f)
+        {
+            if (!audioSourceWalk.isPlaying) audioSourceWalk.Play();
+        }
+        else if (audioSourceWalk.isPlaying)
+        {
+            audioSourceWalk.Stop();
+        }
 
         // --- MOVIMIENTO DIFERENCIADO ---
         if (esElOriginal)
         {
-            if (Input.GetKey(KeyCode.D) && !estaCargando) h = 1;
-            else if (Input.GetKey(KeyCode.A) && !estaCargando) h = -1;
+            if (Input.GetKey(KeyCode.D) && !estaCargando)
+            {
+                h = 1;
+            }
 
+            else if (Input.GetKey(KeyCode.A) && !estaCargando)
+            {
+                h = -1;
+            }
             inputHorizontal = h;
 
             if (Input.GetKey(KeyCode.F) && enSuelo && !estaCargando && cloneIsAvailable)
@@ -199,13 +251,21 @@ public class PlayerController : MonoBehaviour
                 estaCargando = true;
                 tiempoPresionado = 0f;
                 CambiarEstado(SlimeState.PreCharge);
+
+                // Iniciamos el sonido de carga UNA SOLA VEZ
+                audioSourceEffects.clip = cargarSalto;
+                audioSourceEffects.loop = true;
+                audioSourceEffects.pitch = 1f;
+                audioSourceEffects.Play();
             }
 
             if (Input.GetKey(KeyCode.S) && estaCargando)
             {
                 tiempoPresionado += Time.deltaTime;
 
-                // Transición automática de Pre-carga a Carga en bucle
+                // Modificamos el pitch gradualmente sin saturar
+                audioSourceEffects.pitch = 1f + (tiempoPresionado / tiempoCargaMax) * 0.5f;
+
                 if (tiempoPresionado > 0.15f && estadoActual == SlimeState.PreCharge)
                 {
                     CambiarEstado(SlimeState.Charge);
@@ -214,10 +274,19 @@ public class PlayerController : MonoBehaviour
 
             if (Input.GetKeyUp(KeyCode.S) && estaCargando)
             {
-                CambiarEstado(SlimeState.Jump); // Estado 5: El impulso
+                // Detenemos el sonido de carga para que no se quede loopeando
+                audioSourceEffects.Stop();
+                audioSourceEffects.pitch = 1f;
+                audioSourceEffects.PlayOneShot(jumpRelease);
+                audioSourceEffects.loop = false; // Reset para otros efectos
+
+                CambiarEstado(SlimeState.Jump);
                 EjecutarSalto();
+
+                // Reproducimos el sonido de IMPULSO (si tienes uno)
+                // audioSourceEffects.PlayOneShot(sonidoImpulso); 
+
                 estaCargando = false;
-                ActualizarEscala(); // Resetea cualquier deformación si la hubiera
             }
         }
         else
@@ -227,13 +296,21 @@ public class PlayerController : MonoBehaviour
                 estaCargando = true;
                 tiempoPresionado = 0f;
                 CambiarEstado(SlimeState.PreCharge);
+
+                // Iniciamos el sonido de carga UNA SOLA VEZ
+                audioSourceEffects.clip = cargarSalto;
+                audioSourceEffects.loop = true;
+                audioSourceEffects.pitch = 1f;
+                audioSourceEffects.Play();
             }
 
             if (Input.GetKey(KeyCode.DownArrow) && estaCargando)
             {
                 tiempoPresionado += Time.deltaTime;
 
-                // Transición automática de Pre-carga a Carga en bucle
+                // Modificamos el pitch gradualmente sin saturar
+                audioSourceEffects.pitch = 1f + (tiempoPresionado / tiempoCargaMax) * 0.5f;
+
                 if (tiempoPresionado > 0.15f && estadoActual == SlimeState.PreCharge)
                 {
                     CambiarEstado(SlimeState.Charge);
@@ -242,10 +319,19 @@ public class PlayerController : MonoBehaviour
 
             if (Input.GetKeyUp(KeyCode.DownArrow) && estaCargando)
             {
-                CambiarEstado(SlimeState.Jump); // Estado 5: El impulso
+                // Detenemos el sonido de carga para que no se quede loopeando
+                audioSourceEffects.Stop();
+                audioSourceEffects.pitch = 1f;
+                audioSourceEffects.PlayOneShot(jumpRelease);
+                audioSourceEffects.loop = false; // Reset para otros efectos
+
+                CambiarEstado(SlimeState.Jump);
                 EjecutarSalto();
+
+                // Reproducimos el sonido de IMPULSO (si tienes uno)
+                // audioSourceEffects.PlayOneShot(sonidoImpulso); 
+
                 estaCargando = false;
-                ActualizarEscala(); // Resetea cualquier deformación si la hubiera
             }
         }
 
@@ -327,6 +413,7 @@ public class PlayerController : MonoBehaviour
     }
     private void RealizarAtaqueMelee()
     {
+        audioSourceEffects.PlayOneShot(melee);
         hitboxMelee.SetActive(true);
     }
     public void ActualizarEscala()
@@ -345,9 +432,35 @@ public class PlayerController : MonoBehaviour
     }
 
     // Corrutinas
+    private IEnumerator SecuenciaHit()
+    {
+        esInvulnerable = true; // Activa el escudo
+        CambiarEstado(SlimeState.Hit);
+        audioSourceEffects.PlayOneShot(hit);
+        ActualizarAnimator();
+
+        // 1. Tiempo de "aturdimiento" (bloqueo de controles)
+        // Es lo que dura la animación de rebote/dolor
+        yield return new WaitForSeconds(0.4f);
+
+        // Devolvemos el estado a la normalidad para que pueda moverse
+        if (Mathf.Abs(inputHorizontal) > 0.1f)
+            CambiarEstado(SlimeState.Movement);
+        else
+            CambiarEstado(SlimeState.Idle);
+
+        ActualizarAnimator();
+
+        // 2. Tiempo extra de invulnerabilidad (opcional)
+        // Esto es para que el jugador tenga un segundo para escapar antes de recibir otro golpe
+        yield return new WaitForSeconds(0.6f);
+
+        esInvulnerable = false; // Desactiva el escudo
+    }
     private IEnumerator SecuenciaDisparo()
     {
         CambiarEstado(SlimeState.Shoot);
+        audioSourceEffects.PlayOneShot(shoot);
         ActualizarAnimator();
 
         if (rangedController != null)
@@ -430,6 +543,7 @@ public class PlayerController : MonoBehaviour
 
         // 1. Iniciar Despawn (Animación Estado 8)
         CambiarEstado(SlimeState.Despawn);
+        audioSourceEffects.PlayOneShot(despawn);
         ActualizarAnimator();
 
         // 2. Esperar a que la animación de Despawn termine (ajusta según tu clip)

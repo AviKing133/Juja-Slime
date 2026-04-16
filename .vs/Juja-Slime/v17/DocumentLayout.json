@@ -1,57 +1,57 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Unity\\Proyectos\\Juja-Slime\\",
+  "WorkspaceRootPath": "C:\\Users\\carus\\Juja-Slime\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|d:\\unity\\proyectos\\juja-slime\\assets\\scripts\\rangedcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\rangedcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|d:\\unity\\proyectos\\juja-slime\\assets\\scripts\\bulletcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bulletcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|D:\\Unity\\Proyectos\\Juja-Slime\\assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|C:\\Users\\carus\\Juja-Slime\\assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|D:\\Unity\\Proyectos\\Juja-Slime\\assets\\scripts\\pickupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|c:\\users\\carus\\juja-slime\\assets\\scripts\\rangedcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\rangedcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|C:\\Users\\carus\\Juja-Slime\\assets\\scripts\\bulletcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bulletcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|C:\\Users\\carus\\Juja-Slime\\assets\\scripts\\pickupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\pickupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|D:\\Unity\\Proyectos\\Juja-Slime\\assets\\scripts\\paralax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|C:\\Users\\carus\\Juja-Slime\\assets\\scripts\\paralax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\paralax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|D:\\Unity\\Proyectos\\Juja-Slime\\assets\\scripts\\cameracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|C:\\Users\\carus\\Juja-Slime\\assets\\scripts\\cameracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cameracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|D:\\Unity\\Proyectos\\Juja-Slime\\assets\\scripts\\boss1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|C:\\Users\\carus\\Juja-Slime\\assets\\scripts\\boss1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\boss1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|D:\\Unity\\Proyectos\\Juja-Slime\\assets\\scripts\\interfacebehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|C:\\Users\\carus\\Juja-Slime\\assets\\scripts\\interfacebehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interfacebehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|D:\\Unity\\Proyectos\\Juja-Slime\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|C:\\Users\\carus\\Juja-Slime\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|D:\\Unity\\Proyectos\\Juja-Slime\\assets\\scripts\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|C:\\Users\\carus\\Juja-Slime\\assets\\scripts\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|D:\\Unity\\Proyectos\\Juja-Slime\\assets\\scripts\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|C:\\Users\\carus\\Juja-Slime\\assets\\scripts\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|D:\\Unity\\Proyectos\\Juja-Slime\\assets\\scripts\\lever.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|C:\\Users\\carus\\Juja-Slime\\assets\\scripts\\lever.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\lever.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|D:\\Unity\\Proyectos\\Juja-Slime\\assets\\scripts\\plomosbehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|C:\\Users\\carus\\Juja-Slime\\assets\\scripts\\plomosbehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\plomosbehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -62,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -78,24 +78,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "BulletController.cs",
-              "DocumentMoniker": "D:\\Unity\\Proyectos\\Juja-Slime\\Assets\\Scripts\\BulletController.cs",
+              "DocumentMoniker": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\BulletController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\BulletController.cs",
-              "ToolTip": "D:\\Unity\\Proyectos\\Juja-Slime\\Assets\\Scripts\\BulletController.cs",
+              "ToolTip": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\BulletController.cs",
               "RelativeToolTip": "Assets\\Scripts\\BulletController.cs",
               "ViewState": "AgIAADEAAAAAAAAAAAAqwEEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-15T14:48:49.709Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-15T14:48:49.709Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "RangedController.cs",
-              "DocumentMoniker": "D:\\Unity\\Proyectos\\Juja-Slime\\Assets\\Scripts\\RangedController.cs",
+              "DocumentMoniker": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\RangedController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\RangedController.cs",
-              "ToolTip": "D:\\Unity\\Proyectos\\Juja-Slime\\Assets\\Scripts\\RangedController.cs",
+              "ToolTip": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\RangedController.cs",
               "RelativeToolTip": "Assets\\Scripts\\RangedController.cs",
               "ViewState": "AgIAACwAAAAAAAAAAAAgwEMAAABfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -104,13 +103,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "PlayerController.cs",
-              "DocumentMoniker": "D:\\Unity\\Proyectos\\Juja-Slime\\Assets\\Scripts\\PlayerController.cs",
+              "DocumentMoniker": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerController.cs",
-              "ToolTip": "D:\\Unity\\Proyectos\\Juja-Slime\\Assets\\Scripts\\PlayerController.cs",
+              "ToolTip": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\PlayerController.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerController.cs",
-              "ViewState": "AgIAAKcAAAAAAAAAAAAcwLoAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAcwDECAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-15T06:46:44.582Z",
               "EditorCaption": ""
@@ -119,9 +118,9 @@
               "$type": "Document",
               "DocumentIndex": 9,
               "Title": "MainMenu.cs",
-              "DocumentMoniker": "D:\\Unity\\Proyectos\\Juja-Slime\\Assets\\Scripts\\MainMenu.cs",
+              "DocumentMoniker": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\MainMenu.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MainMenu.cs",
-              "ToolTip": "D:\\Unity\\Proyectos\\Juja-Slime\\Assets\\Scripts\\MainMenu.cs",
+              "ToolTip": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\MainMenu.cs",
               "RelativeToolTip": "Assets\\Scripts\\MainMenu.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -131,9 +130,9 @@
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "GameManager.cs",
-              "DocumentMoniker": "D:\\Unity\\Proyectos\\Juja-Slime\\Assets\\Scripts\\GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
-              "ToolTip": "D:\\Unity\\Proyectos\\Juja-Slime\\Assets\\Scripts\\GameManager.cs",
+              "ToolTip": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\GameManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
               "ViewState": "AgIAAIYAAAAAAAAAAAAUwHgAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -143,9 +142,9 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "PickupController.cs",
-              "DocumentMoniker": "D:\\Unity\\Proyectos\\Juja-Slime\\Assets\\Scripts\\PickupController.cs",
+              "DocumentMoniker": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\PickupController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PickupController.cs",
-              "ToolTip": "D:\\Unity\\Proyectos\\Juja-Slime\\Assets\\Scripts\\PickupController.cs",
+              "ToolTip": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\PickupController.cs",
               "RelativeToolTip": "Assets\\Scripts\\PickupController.cs",
               "ViewState": "AgIAADkAAAAAAAAAAAAjwFwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -155,9 +154,9 @@
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "Paralax.cs",
-              "DocumentMoniker": "D:\\Unity\\Proyectos\\Juja-Slime\\Assets\\Scripts\\Paralax.cs",
+              "DocumentMoniker": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\Paralax.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Paralax.cs",
-              "ToolTip": "D:\\Unity\\Proyectos\\Juja-Slime\\Assets\\Scripts\\Paralax.cs",
+              "ToolTip": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\Paralax.cs",
               "RelativeToolTip": "Assets\\Scripts\\Paralax.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -167,9 +166,9 @@
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "CameraController.cs",
-              "DocumentMoniker": "D:\\Unity\\Proyectos\\Juja-Slime\\Assets\\Scripts\\CameraController.cs",
+              "DocumentMoniker": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\CameraController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\CameraController.cs",
-              "ToolTip": "D:\\Unity\\Proyectos\\Juja-Slime\\Assets\\Scripts\\CameraController.cs",
+              "ToolTip": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\CameraController.cs",
               "RelativeToolTip": "Assets\\Scripts\\CameraController.cs",
               "ViewState": "AgIAADgAAAAAAAAAAADwv0gAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -179,9 +178,9 @@
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "Boss1.cs",
-              "DocumentMoniker": "D:\\Unity\\Proyectos\\Juja-Slime\\Assets\\Scripts\\Boss1.cs",
+              "DocumentMoniker": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\Boss1.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Boss1.cs",
-              "ToolTip": "D:\\Unity\\Proyectos\\Juja-Slime\\Assets\\Scripts\\Boss1.cs",
+              "ToolTip": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\Boss1.cs",
               "RelativeToolTip": "Assets\\Scripts\\Boss1.cs",
               "ViewState": "AgIAADgAAAAAAAAAAAAswDUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -191,9 +190,9 @@
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "InterfaceBehaviour.cs",
-              "DocumentMoniker": "D:\\Unity\\Proyectos\\Juja-Slime\\Assets\\Scripts\\InterfaceBehaviour.cs",
+              "DocumentMoniker": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\InterfaceBehaviour.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\InterfaceBehaviour.cs",
-              "ToolTip": "D:\\Unity\\Proyectos\\Juja-Slime\\Assets\\Scripts\\InterfaceBehaviour.cs",
+              "ToolTip": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\InterfaceBehaviour.cs",
               "RelativeToolTip": "Assets\\Scripts\\InterfaceBehaviour.cs",
               "ViewState": "AgIAACsAAAAAAAAAAAAkwAgAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -203,9 +202,9 @@
               "$type": "Document",
               "DocumentIndex": 11,
               "Title": "Lever.cs",
-              "DocumentMoniker": "D:\\Unity\\Proyectos\\Juja-Slime\\Assets\\Scripts\\Lever.cs",
+              "DocumentMoniker": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\Lever.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Lever.cs",
-              "ToolTip": "D:\\Unity\\Proyectos\\Juja-Slime\\Assets\\Scripts\\Lever.cs",
+              "ToolTip": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\Lever.cs",
               "RelativeToolTip": "Assets\\Scripts\\Lever.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -215,9 +214,9 @@
               "$type": "Document",
               "DocumentIndex": 12,
               "Title": "PlomosBehaviour.cs",
-              "DocumentMoniker": "D:\\Unity\\Proyectos\\Juja-Slime\\Assets\\Scripts\\PlomosBehaviour.cs",
+              "DocumentMoniker": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\PlomosBehaviour.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlomosBehaviour.cs",
-              "ToolTip": "D:\\Unity\\Proyectos\\Juja-Slime\\Assets\\Scripts\\PlomosBehaviour.cs",
+              "ToolTip": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\PlomosBehaviour.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlomosBehaviour.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -227,9 +226,9 @@
               "$type": "Document",
               "DocumentIndex": 10,
               "Title": "Door.cs",
-              "DocumentMoniker": "D:\\Unity\\Proyectos\\Juja-Slime\\Assets\\Scripts\\Door.cs",
+              "DocumentMoniker": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\Door.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Door.cs",
-              "ToolTip": "D:\\Unity\\Proyectos\\Juja-Slime\\Assets\\Scripts\\Door.cs",
+              "ToolTip": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\Door.cs",
               "RelativeToolTip": "Assets\\Scripts\\Door.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAQwCkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

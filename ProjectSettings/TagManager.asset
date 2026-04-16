@@ -9,9 +9,9 @@ TagManager:
   - clone
   - bullet
   - pickupClone
-  - jujer
   - threat
   - walls
+  - enemy
   layers:
   - Default
   - TransparentFX
