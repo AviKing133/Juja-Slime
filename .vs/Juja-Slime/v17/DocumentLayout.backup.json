@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\carus\\Juja-Slime\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|c:\\users\\carus\\juja-slime\\assets\\scripts\\enemy1controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy1controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|C:\\Users\\carus\\Juja-Slime\\assets\\scripts\\cameracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cameracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|C:\\Users\\carus\\Juja-Slime\\assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|c:\\users\\carus\\juja-slime\\assets\\scripts\\utilidades\\triggerdialogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\utilidades\\triggerdialogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,20 +23,12 @@
       "RelativeMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\lever.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|C:\\Users\\carus\\Juja-Slime\\assets\\scripts\\cameracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cameracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|C:\\Users\\carus\\Juja-Slime\\assets\\scripts\\bulletcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bulletcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|C:\\Users\\carus\\Juja-Slime\\assets\\scripts\\rangedcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\rangedcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|C:\\Users\\carus\\Juja-Slime\\assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|C:\\Users\\carus\\Juja-Slime\\assets\\scripts\\pickupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -83,6 +87,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Enemy1Controller.cs",
+              "DocumentMoniker": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\Enemy1Controller.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy1Controller.cs",
+              "ToolTip": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\Enemy1Controller.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemy1Controller.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAwwGIAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T08:55:37.335Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "TriggerDialogo.cs",
               "DocumentMoniker": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\Utilidades\\TriggerDialogo.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Utilidades\\TriggerDialogo.cs",
@@ -95,7 +112,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "BulletController.cs",
               "DocumentMoniker": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\BulletController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\BulletController.cs",
@@ -107,19 +124,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerController.cs",
               "ToolTip": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\PlayerController.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerController.cs",
-              "ViewState": "AgIAAJUAAAAAAAAAAAAiwKwAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAIwAAAAAAAAAAAA8wOEBAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-15T06:46:44.582Z"
+              "WhenOpened": "2026-04-15T06:46:44.582Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "MainMenu.cs",
               "DocumentMoniker": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\MainMenu.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MainMenu.cs",
@@ -131,7 +149,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "GameManager.cs",
               "DocumentMoniker": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
@@ -143,7 +161,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "PickupController.cs",
               "DocumentMoniker": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\PickupController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PickupController.cs",
@@ -155,7 +173,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Paralax.cs",
               "DocumentMoniker": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\Paralax.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Paralax.cs",
@@ -167,19 +185,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "CameraController.cs",
               "DocumentMoniker": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\CameraController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\CameraController.cs",
               "ToolTip": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\CameraController.cs",
               "RelativeToolTip": "Assets\\Scripts\\CameraController.cs",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAowIMAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAzwGQAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-10T14:16:57.049Z"
+              "WhenOpened": "2026-02-10T14:16:57.049Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Boss1.cs",
               "DocumentMoniker": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\Boss1.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Boss1.cs",
@@ -191,7 +210,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Lever.cs",
               "DocumentMoniker": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\Lever.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Lever.cs",
@@ -203,7 +222,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "RangedController.cs",
               "DocumentMoniker": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\RangedController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\RangedController.cs",
@@ -215,7 +234,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "InterfaceBehaviour.cs",
               "DocumentMoniker": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\InterfaceBehaviour.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\InterfaceBehaviour.cs",
@@ -227,7 +246,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "PlomosBehaviour.cs",
               "DocumentMoniker": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\PlomosBehaviour.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlomosBehaviour.cs",
@@ -239,7 +258,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Door.cs",
               "DocumentMoniker": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\Door.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Door.cs",
