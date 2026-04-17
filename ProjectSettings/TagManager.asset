@@ -12,6 +12,8 @@ TagManager:
   - threat
   - walls
   - enemy
+  - jujer
+  - melee
   layers:
   - Default
   - TransparentFX

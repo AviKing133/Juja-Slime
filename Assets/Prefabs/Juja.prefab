@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ab4dc41f997ce64e83171930550301d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyTag: jujer
+  enemyTag: enemy
   currentTarget: {fileID: 0}
   bulletPrefab: {fileID: 5092076230973032044, guid: a1f4db034a688b2449f66614ad286323, type: 3}
 --- !u!1 &946471395666377227
@@ -272,7 +272,7 @@ PolygonCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 76d528e3870617f4a80921fe970444fb, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -310,8 +310,12 @@ PolygonCollider2D:
     m_Paths:
     - - {x: -0.08260262, y: -0.057182092}
       - {x: -0.18651654, y: -0.16892374}
-      - {x: -0.17477478, y: -0.3258708}
-      - {x: 0.1647748, y: -0.32391387}
+      - {x: -0.17197992, y: -0.2858109}
+      - {x: 0.13682604, y: -0.28571713}
+      - {x: 0.16197991, y: -0.28664875}
+      - {x: 0.15918499, y: -0.2847855}
+      - {x: 0.1647748, y: -0.28385395}
+      - {x: 0.1669352, y: -0.27345777}
       - {x: 0.17260262, y: -0.14109609}
       - {x: 0.09021521, y: -0.041526455}
   m_UseDelaunayMesh: 0
@@ -331,14 +335,14 @@ MonoBehaviour:
   estadoActual: 0
   velocidad: 6
   mirandoDerecha: 1
-  rangedController: {fileID: 0}
+  rangedController: {fileID: 7026701524182183437}
   tiempoUltimoDisparo: 0
-  cadenciaRanged: 0
-  ammo: 0
+  cadenciaRanged: 1
+  ammo: 3
   fuerzaMinima: 5
-  fuerzaMaxima: 18
-  tiempoCargaMax: 1.2
-  anguloSalto: {x: 0.5, y: 1}
+  fuerzaMaxima: 14
+  tiempoCargaMax: 2
+  anguloSalto: {x: 1, y: 1}
   escalaActual: 3
   perdidaPorClon: 0.5
   perdidaPorBala: 0.2
@@ -577,7 +581,7 @@ GameObject:
   - component: {fileID: 5734241023148961911}
   m_Layer: 0
   m_Name: MeleeHitbox
-  m_TagString: Untagged
+  m_TagString: melee
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
