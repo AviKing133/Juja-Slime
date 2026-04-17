@@ -9,6 +9,10 @@ public class Lever : MonoBehaviour
     public GameObject PalancaAccionada;
     public GameObject PalancaOFF;
 
+    // Cambios de terreno
+    public GameObject terrenoMostrar;
+    public GameObject terrenoOcultar;
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("player") && Input.GetKeyDown(KeyCode.E))
@@ -48,6 +52,8 @@ public class Lever : MonoBehaviour
 
     private void AccionarPalanca()
     {
+        terrenoMostrar.SetActive(true);
+        terrenoOcultar.SetActive(false);
         PalancaAccionada.SetActive(true);
         PalancaOFF.SetActive(false);
     }
