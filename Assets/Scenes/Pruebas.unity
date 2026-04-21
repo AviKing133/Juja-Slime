@@ -124,17 +124,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5914576479220014889, guid: 3ad8eb9532b3e754490e0eab96648958, type: 3}
   m_PrefabInstance: {fileID: 1514339438}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &797992410 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7026701524182183437, guid: 3ad8eb9532b3e754490e0eab96648958, type: 3}
-  m_PrefabInstance: {fileID: 1514339438}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ab4dc41f997ce64e83171930550301d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1013052055
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,26 +404,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slime
       objectReference: {fileID: 0}
-    - target: {fileID: 3510186242139057535, guid: 3ad8eb9532b3e754490e0eab96648958, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3510186242139057535, guid: 3ad8eb9532b3e754490e0eab96648958, type: 3}
-      propertyPath: m_TagString
-      value: melee
-      objectReference: {fileID: 0}
-    - target: {fileID: 3946271359481442876, guid: 3ad8eb9532b3e754490e0eab96648958, type: 3}
-      propertyPath: ammo
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3946271359481442876, guid: 3ad8eb9532b3e754490e0eab96648958, type: 3}
-      propertyPath: cadenciaRanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3946271359481442876, guid: 3ad8eb9532b3e754490e0eab96648958, type: 3}
-      propertyPath: rangedController
-      value: 
-      objectReference: {fileID: 797992410}
     - target: {fileID: 5914576479220014889, guid: 3ad8eb9532b3e754490e0eab96648958, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.06
@@ -474,14 +443,6 @@ PrefabInstance:
     - target: {fileID: 5914576479220014889, guid: 3ad8eb9532b3e754490e0eab96648958, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7026701524182183437, guid: 3ad8eb9532b3e754490e0eab96648958, type: 3}
-      propertyPath: enemyTag
-      value: enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 7638461470655039010, guid: 3ad8eb9532b3e754490e0eab96648958, type: 3}
-      propertyPath: m_Radius
-      value: 0.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1065,11 +1026,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3191115788135143740, guid: 89d3fae995b978b429499e4eca18cd45, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.334
+      value: 5.08
       objectReference: {fileID: 0}
     - target: {fileID: 3191115788135143740, guid: 89d3fae995b978b429499e4eca18cd45, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.319
+      value: -3.05
       objectReference: {fileID: 0}
     - target: {fileID: 3191115788135143740, guid: 89d3fae995b978b429499e4eca18cd45, type: 3}
       propertyPath: m_LocalPosition.z

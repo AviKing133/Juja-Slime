@@ -4,6 +4,7 @@ using System.Collections;
 public class TriggerDialogo : MonoBehaviour
 {
     public GameObject ShortCut;
+    public GameObject FlechaIndicadora;
 
     [Header("Configuración de Sonido")]
     public AudioSource audioSource;
@@ -25,6 +26,7 @@ public class TriggerDialogo : MonoBehaviour
     {
         // 1. Desactivar el ShortCut
         if (ShortCut != null) ShortCut.SetActive(false);
+        FlechaIndicadora.SetActive(true);
 
         // 2. Ejecutar el efecto de cámara
         var cam = Object.FindFirstObjectByType<CameraController>();

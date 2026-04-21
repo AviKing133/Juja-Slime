@@ -6,19 +6,24 @@ public class RangedController : MonoBehaviour
     public string enemyTag = "Enemy";
     public Transform currentTarget;
     public GameObject bulletPrefab;
+    public PlayerController player;
+
+    public Transform defaultSpawner;
 
     private List<Transform> enemiesInRange = new List<Transform>();
-    private Transform[] bulletSpawners; // Se llenará automáticamente con los hijos
+    private Transform[] bulletSpawners;
 
     void Awake()
     {
-        // Obtiene todos los hijos del objeto para usarlos como puntos de disparo
-        // Esto evita tener que arrastrarlos manualmente al inspector
         bulletSpawners = new Transform[transform.childCount];
         for (int i = 0; i < transform.childCount; i++)
         {
             bulletSpawners[i] = transform.GetChild(i);
         }
+
+        // Si no asignaste uno manualmente, intentamos usar el primero por defecto
+        if (defaultSpawner == null && bulletSpawners.Length > 0)
+            defaultSpawner = bulletSpawners[0];
     }
 
     void Update()
@@ -28,6 +33,7 @@ public class RangedController : MonoBehaviour
 
     void UpdateNearestTarget()
     {
+        player = GetComponentInParent<PlayerController>();
         float closestDistance = Mathf.Infinity;
         Transform closestEnemy = null;
 
@@ -45,33 +51,36 @@ public class RangedController : MonoBehaviour
         currentTarget = closestEnemy;
     }
 
-    // --- MÉTODO PARA LLAMAR DESDE EL PLAYER ---
     public void OrderFire()
     {
-        if (currentTarget == null)
+        PlayerController player = GetComponentInParent<PlayerController>();
+        if (player != null && player.ammo <= 0) return;
+        if (bulletPrefab == null) return;
+
+        float angle = 0;
+        Transform spawnerToUse = null;
+
+        if (currentTarget != null)
         {
-            Debug.Log("No disparo: No hay target.");
-            return;
-        }
-
-        Transform bestSpawner = GetNearestSpawner(currentTarget.position);
-
-        if (bestSpawner != null && bulletPrefab != null)
-        {
-            // 1. Instanciar
-            GameObject bullet = Instantiate(bulletPrefab, bestSpawner.position, Quaternion.identity);
-
-            // 2. Cálculo de dirección 2D
-            Vector2 direccion = (currentTarget.position - bestSpawner.position).normalized;
-
-            // 4. LOG DE CONTROL (Revisa la consola de Unity)
-            Debug.Log($"Bala instanciada hacia {currentTarget.name} desde {bestSpawner.name}");
-
+            // --- DISPARO A ENEMIGO ---
+            spawnerToUse = GetNearestSpawner(currentTarget.position);
+            Vector2 direccion = (currentTarget.position - spawnerToUse.position).normalized;
+            angle = Mathf.Atan2(direccion.y, direccion.x) * Mathf.Rad2Deg;
         }
         else
         {
-            Debug.LogWarning("Falta el Prefab de la bala o los Spawners hijos.");
+            // --- DISPARO POR DEFECTO (HACIA ADELANTE) ---
+            spawnerToUse = defaultSpawner;
+            if (spawnerToUse == null) return;
+
+            // Si el player mira a la derecha el ángulo es 0, si mira a la izquierda es 180
+            angle = (player != null && !player.mirandoDerecha) ? 180f : 0f;
         }
+
+        // Instanciar la bala
+        Instantiate(bulletPrefab, spawnerToUse.position, Quaternion.Euler(0, 0, angle));
+
+        if (player != null) player.ammo--;
     }
 
     private Transform GetNearestSpawner(Vector3 targetPos)

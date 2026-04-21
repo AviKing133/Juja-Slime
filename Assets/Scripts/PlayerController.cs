@@ -63,6 +63,7 @@ public class PlayerController : MonoBehaviour
     public float cadenciaMelee = 0.6f;
     public LayerMask capaEnemigos;    // Selecciona a quién quieres pegar
     private float tiempoUltimoMelee;
+    private bool esperandoParaMorir = false;
 
     [Header("Referencias")]
     public Animator anim;
@@ -80,6 +81,8 @@ public class PlayerController : MonoBehaviour
     public AudioClip spawn;
     public AudioClip despawn;
     public AudioClip hit;
+    public AudioClip recogerAmmo;
+    public AudioClip muerte;
 
 
     void Awake()
@@ -118,6 +121,7 @@ public class PlayerController : MonoBehaviour
     }
     void Update()
     {
+        if (estadoActual == SlimeState.Death || esperandoParaMorir) return;
         // 1. Si estamos en Spawn, esperamos a que termine para pasar a Idle
         if (estadoActual == SlimeState.Spawn)
         {
@@ -140,6 +144,7 @@ public class PlayerController : MonoBehaviour
     }
     void FixedUpdate()
     {
+        if (estadoActual == SlimeState.Death || esperandoParaMorir) return;
         if (PuedeMoverse())
         {
             rb.linearVelocity = new Vector2(inputHorizontal * velocidad, rb.linearVelocity.y);
@@ -156,19 +161,34 @@ public class PlayerController : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("ground"))
+        if (esElOriginal)
         {
-            audioSourceEffects.PlayOneShot(impact);
-            enSuelo = true;
-        }
-        if (collision.gameObject.CompareTag("enemy") && ammo >= 1 && !esInvulnerable)
-        {
-            ammo -= 1;
-            StartCoroutine(SecuenciaHit());
-        }
-        else if (collision.gameObject.CompareTag("enemy") && ammo < 1 && !esInvulnerable)
-        {
-            CambiarEstado(SlimeState.Death);
+            if (estadoActual == SlimeState.Death) return;
+
+            if (collision.gameObject.CompareTag("ground"))
+            {
+                enSuelo = true;
+                audioSourceEffects.PlayOneShot(impact);
+
+                // Si estábamos esperando tocar el suelo para morir, este es el momento
+                if (esperandoParaMorir)
+                {
+                    Muerte();
+                }
+            }
+
+            if (collision.gameObject.CompareTag("enemy") && !esInvulnerable)
+            {
+                if (ammo > 0)
+                {
+                    ammo -= 1;
+                    StartCoroutine(SecuenciaHit());
+                }
+                else
+                {
+                    StartCoroutine(SecuenciaUltimoHitAntesDeMorir());
+                }
+            }
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
@@ -430,6 +450,23 @@ public class PlayerController : MonoBehaviour
         cloneIsAvailable = false;
         StartCoroutine(SecuenciaSpawnClon());
     }
+    void Muerte()
+    {
+        esperandoParaMorir = false;
+        estadoActual = SlimeState.Death; // Asumiendo que 4 es Death
+        audioSourceEffects.PlayOneShot(muerte);
+        ActualizarAnimator();
+
+        // 1. Primero ponemos la velocidad a cero
+        rb.linearVelocity = Vector2.zero;
+        rb.angularVelocity = 0f;
+
+        // 2. DESPUÉS lo hacemos Static o desactivamos la simulación
+        rb.bodyType = RigidbodyType2D.Static;
+
+        // 3. Quitamos el collider
+        GetComponent<Collider2D>().enabled = false;
+    }
 
     // Corrutinas
     private IEnumerator SecuenciaHit()
@@ -456,6 +493,16 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(0.6f);
 
         esInvulnerable = false; // Desactiva el escudo
+    }
+    private IEnumerator SecuenciaUltimoHitAntesDeMorir()
+    {
+        esInvulnerable = true;
+        CambiarEstado(SlimeState.Hit);
+        audioSourceEffects.PlayOneShot(hit);
+        ActualizarAnimator();
+
+        yield return new WaitForSeconds(0.4f);
+        esperandoParaMorir = true;
     }
     private IEnumerator SecuenciaDisparo()
     {
@@ -565,7 +612,20 @@ public class PlayerController : MonoBehaviour
 
     public void FinalizarSpawn() { anim.SetBool("IsAlive", true); CambiarEstado(SlimeState.Idle); }
     public void CambiarEstado(SlimeState nuevo) { estadoActual = nuevo; }
-    private void ActualizarAnimator() { anim.SetInteger("State", (int)estadoActual); }
+    private void ActualizarAnimator()
+    {
+        anim.SetInteger("State", (int)estadoActual);
+
+        // Forzamos que si es Death, no haya otros parámetros activos
+        if (estadoActual == SlimeState.Death)
+        {
+            anim.SetBool("enSuelo", true);
+        }
+    }
+    public void EventoMuerte()
+    {
+        Destroy(gameObject);
+    }
     private bool PuedeMoverse()
     {
         return estadoActual == SlimeState.Idle ||
@@ -575,4 +635,9 @@ public class PlayerController : MonoBehaviour
                estadoActual == SlimeState.Falling;
     }
     private void Girar() { mirandoDerecha = !mirandoDerecha; ActualizarEscala(); }
+    public void SumarAmmo()
+    {
+        audioSourceEffects.PlayOneShot(recogerAmmo);
+        ammo = Mathf.Min(ammo + 1, 3); // Limita a un máximo de 3
+    }
 }

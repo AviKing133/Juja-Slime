@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class EnemigoPatrulla : MonoBehaviour
+public class Enemigo1Controller : MonoBehaviour
 {
     public enum EnemyState { Idle = 0, Run = 1, Hit = 2, Attack = 3, Death = 4 }
 
@@ -23,6 +23,9 @@ public class EnemigoPatrulla : MonoBehaviour
     private Animator anim;
     private bool moviendoDerecha = true;
     private bool bloqueado = false; // Para que no se mueva durante Hit o Attack
+    private bool puedeRecibirDaño = true;
+    [Header("Ajustes de Seguridad")]
+    public float cooldownDaño = 0.2f;
 
     void Start()
     {
@@ -80,7 +83,8 @@ public class EnemigoPatrulla : MonoBehaviour
     {
         if (estadoActual == EnemyState.Death) return;
 
-        if (collision.CompareTag("bullet") || collision.CompareTag("melee"))
+        // Añadimos el check de "puedeRecibirDaño"
+        if (puedeRecibirDaño && (collision.CompareTag("bullet") || collision.CompareTag("melee")))
         {
             RecibirDaño();
         }
@@ -88,14 +92,13 @@ public class EnemigoPatrulla : MonoBehaviour
 
     public void RecibirDaño()
     {
-        // SI YA ESTÁ MUERTO O EN ESTADO DE MUERTE, SALIMOS
-        if (estadoActual == EnemyState.Death) return;
+        if (estadoActual == EnemyState.Death || !puedeRecibirDaño) return;
 
         vida--;
+        StartCoroutine(ActivarCooldownDaño()); // Iniciamos el tiempo de espera
 
         if (vida <= 0)
         {
-            // Forzamos el estado de muerte AQUÍ mismo, antes de la corrutina
             CambiarEstado(EnemyState.Death);
             StartCoroutine(SecuenciaMuerte());
         }
@@ -130,7 +133,16 @@ public class EnemigoPatrulla : MonoBehaviour
             CambiarEstado(EnemyState.Run);
         }
     }
-
+    IEnumerator ActivarCooldownDaño()
+    {
+        puedeRecibirDaño = false;
+        yield return new WaitForSeconds(cooldownDaño);
+        // Solo volvemos a activar si no está muerto
+        if (estadoActual != EnemyState.Death)
+        {
+            puedeRecibirDaño = true;
+        }
+    }
     IEnumerator SecuenciaAtaque(GameObject playerObj)
     {
         bloqueado = true;

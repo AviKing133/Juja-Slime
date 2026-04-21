@@ -118,6 +118,8 @@ MonoBehaviour:
   enemyTag: enemy
   currentTarget: {fileID: 0}
   bulletPrefab: {fileID: 5092076230973032044, guid: a1f4db034a688b2449f66614ad286323, type: 3}
+  player: {fileID: 0}
+  defaultSpawner: {fileID: 4237279868600564980}
 --- !u!1 &946471395666377227
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,13 +369,15 @@ MonoBehaviour:
   audioSourceEffects: {fileID: 46201312678860517}
   cargarSalto: {fileID: 8300000, guid: 03891d9c5d7084a4c925c2f8c2d8ef7d, type: 3}
   jumpRelease: {fileID: 8300000, guid: dd6ef0e8c5979324594d12b472e3a35f, type: 3}
-  melee: {fileID: 8300000, guid: 273ba2595aa349142b62326a38cb08dd, type: 3}
+  melee: {fileID: 8300000, guid: 547d1a17471d41c49b5d96992cf4aebb, type: 3}
   shoot: {fileID: 8300000, guid: 89b7bd203cf07494f804fc09b7539c79, type: 3}
   walk: {fileID: 8300000, guid: 1734afec5e3b7ca44b25e0b262f803d3, type: 3}
   impact: {fileID: 8300000, guid: 30a6b339837a9344a966614c876d0374, type: 3}
   spawn: {fileID: 8300000, guid: d72927dd3094efe428ecde4f093e0200, type: 3}
   despawn: {fileID: 8300000, guid: 705cc2c710c40f24fab05e6868359089, type: 3}
   hit: {fileID: 8300000, guid: e2b6a6f61cb2d5f42a6f030220d7c26a, type: 3}
+  recogerAmmo: {fileID: 8300000, guid: 695ec9536e824bf48bb4f19734c15286, type: 3}
+  muerte: {fileID: 8300000, guid: 45e55df302ca30f4cadedd92abe1e207, type: 3}
 --- !u!82 &4179546873105542104
 AudioSource:
   m_ObjectHideFlags: 0
@@ -636,7 +640,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Radius: 0.6
 --- !u!114 &5734241023148961911
 MonoBehaviour:
   m_ObjectHideFlags: 0
