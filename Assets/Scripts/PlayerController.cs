@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -53,7 +54,8 @@ public class PlayerController : MonoBehaviour
     public GameObject prefabClone;
     public GameObject prefabPickupClone;
     public bool cloneIsAvailable = true;
-    public float distanciaSpawn = 0.8f;
+    public float distanciaSpawn = 2f;
+    public Transform spawnPoint;
     public LayerMask capasObstaculos;
 
     [Header("Configuración Melee")]
@@ -70,6 +72,7 @@ public class PlayerController : MonoBehaviour
     public UI_vida Vidas_UI;
     public AudioSource audioSourceWalk;
     public AudioSource audioSourceEffects;
+    public Image barraCarga;
 
     // ClipsAudio
     public AudioClip cargarSalto;
@@ -136,7 +139,7 @@ public class PlayerController : MonoBehaviour
             ActualizarAnimator();
         }
         // CLON
-        if (esElOriginal && Input.GetKeyDown(KeyCode.F) && cloneIsAvailable && estadoActual != SlimeState.MeleeAttack)
+        if (esElOriginal && Input.GetKeyDown(KeyCode.F) && cloneIsAvailable && PuedeMoverse())
         {
             StartCoroutine(SecuenciaSpawnClon());
         }
@@ -160,33 +163,38 @@ public class PlayerController : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (esElOriginal)
+        if (estadoActual == SlimeState.Death) return;
+        
+        if (collision.gameObject.CompareTag("pickupClone"))
         {
-            if (estadoActual == SlimeState.Death) return;
+            cloneIsAvailable = true;
+            Vidas_UI.CloneAvailable();
+            Destroy(collision.gameObject);
+            escalaActual += perdidaPorClon;
+        }
 
-            if (collision.gameObject.CompareTag("ground"))
+        if (collision.gameObject.CompareTag("ground"))
+        {
+            enSuelo = true;
+            audioSourceEffects.PlayOneShot(impact);
+
+            // Si estábamos esperando tocar el suelo para morir, este es el momento
+            if (esperandoParaMorir)
             {
-                enSuelo = true;
-                audioSourceEffects.PlayOneShot(impact);
-
-                // Si estábamos esperando tocar el suelo para morir, este es el momento
-                if (esperandoParaMorir)
-                {
-                    Muerte();
-                }
+                Muerte();
             }
+        }
 
-            if (collision.gameObject.CompareTag("enemy") && !esInvulnerable)
+        if (collision.gameObject.CompareTag("enemy") && !esInvulnerable)
+        {
+            if (ammo > 0)
             {
-                if (ammo > 0)
-                {
-                    ammo -= 1;
-                    StartCoroutine(SecuenciaHit());
-                }
-                else
-                {
-                    StartCoroutine(SecuenciaUltimoHitAntesDeMorir());
-                }
+                ammo -= 1;
+                StartCoroutine(SecuenciaHit());
+            }
+            else
+            {
+                StartCoroutine(SecuenciaUltimoHitAntesDeMorir());
             }
         }
     }
@@ -234,11 +242,6 @@ public class PlayerController : MonoBehaviour
                 h = -1;
             }
             inputHorizontal = h;
-
-            if (Input.GetKey(KeyCode.F) && enSuelo && !estaCargando && cloneIsAvailable)
-            {
-                CambiarEstado(SlimeState.Clon);
-            }
         }
         else
         {
@@ -271,7 +274,9 @@ public class PlayerController : MonoBehaviour
                 tiempoPresionado = 0f;
                 CambiarEstado(SlimeState.PreCharge);
 
-                // Iniciamos el sonido de carga UNA SOLA VEZ
+                // Mostramos la barra al empezar a cargar
+                if (barraCarga != null) barraCarga.fillAmount = 0f;
+
                 audioSourceEffects.clip = cargarSalto;
                 audioSourceEffects.loop = true;
                 audioSourceEffects.pitch = 1f;
@@ -282,7 +287,13 @@ public class PlayerController : MonoBehaviour
             {
                 tiempoPresionado += Time.deltaTime;
 
-                // Modificamos el pitch gradualmente sin saturar
+                // Calculamos el porcentaje y lo aplicamos a la barra
+                if (barraCarga != null)
+                {
+                    float porcentaje = Mathf.Clamp01(tiempoPresionado / tiempoCargaMax);
+                    barraCarga.fillAmount = porcentaje;
+                }
+
                 audioSourceEffects.pitch = 1f + (tiempoPresionado / tiempoCargaMax) * 0.5f;
 
                 if (tiempoPresionado > 0.15f && estadoActual == SlimeState.PreCharge)
@@ -293,17 +304,16 @@ public class PlayerController : MonoBehaviour
 
             if (Input.GetKeyUp(KeyCode.S) && estaCargando)
             {
-                // Detenemos el sonido de carga para que no se quede loopeando
+                // Vaciamos la barra al soltar
+                if (barraCarga != null) barraCarga.fillAmount = 0f;
+
                 audioSourceEffects.Stop();
                 audioSourceEffects.pitch = 1f;
                 audioSourceEffects.PlayOneShot(jumpRelease);
-                audioSourceEffects.loop = false; // Reset para otros efectos
+                audioSourceEffects.loop = false;
 
                 CambiarEstado(SlimeState.Jump);
                 EjecutarSalto();
-
-                // Reproducimos el sonido de IMPULSO (si tienes uno)
-                // audioSourceEffects.PlayOneShot(sonidoImpulso); 
 
                 estaCargando = false;
             }
@@ -506,6 +516,26 @@ public class PlayerController : MonoBehaviour
     }
     private IEnumerator SecuenciaDisparo()
     {
+        // 1. COMPROBACIÓN DE OBSTÁCULO ANTES DE DISPARAR
+        Vector2 direccion = mirandoDerecha ? Vector2.right : Vector2.left;
+
+        // Definimos un área frente al slime que cubra los 3 spawners
+        // Tamaño: 1f de ancho, 2f de alto (para cubrir el spawner de arriba y abajo)
+        Vector2 tamanoArea = new Vector2(1f, 2f);
+        Vector2 centroCheck = (Vector2)transform.position + (direccion * 0.8f);
+
+        RaycastHit2D hit = Physics2D.BoxCast(centroCheck, tamanoArea, 0f, direccion, 0.1f, capasObstaculos);
+
+        // Si hay una pared justo enfrente, cancelamos el disparo
+        if (hit.collider != null)
+        {
+            Debug.Log("Disparo cancelado: Bloqueado por " + hit.collider.name);
+            // Opcional: Sonido de "click" o error
+            CambiarEstado(SlimeState.Idle);
+            yield break;
+        }
+
+        // 2. LOGICA DE DISPARO NORMAL (Si el camino está libre)
         CambiarEstado(SlimeState.Shoot);
         audioSourceEffects.PlayOneShot(shoot);
         ActualizarAnimator();
@@ -515,16 +545,19 @@ public class PlayerController : MonoBehaviour
             rangedController.OrderFire();
         }
 
-        Vidas_UI.UpdateVidas(ammo);
+        if (esElOriginal && Vidas_UI != null)
+        {
+            Vidas_UI.UpdateVidas(ammo);
+        }
+
         yield return new WaitForSeconds(0.3f);
 
-        // FUERZA el regreso a un estado que NO esté en la lista de exclusión
+        // 3. REGRESO A ESTADO NORMAL
         if (Mathf.Abs(inputHorizontal) > 0.1f)
             CambiarEstado(SlimeState.Movement);
         else
             CambiarEstado(SlimeState.Idle);
 
-        // MUY IMPORTANTE: Notifica al Animator el cambio de vuelta
         ActualizarAnimator();
     }
     private IEnumerator SecuenciaMelee()
@@ -546,39 +579,43 @@ public class PlayerController : MonoBehaviour
     }
     IEnumerator SecuenciaSpawnClon()
     {
-        if (!esElOriginal) yield break;
+        // 1. Bloqueo de seguridad
+        if (!esElOriginal || !cloneIsAvailable) yield break;
+        cloneIsAvailable = false;
+        Vidas_UI.CloneUnavailable();
 
-        yield return new WaitForSeconds(0.2f); // Tiempo para el impacto
+        yield return new WaitForSeconds(0.2f);
 
-        // 2. Comprobamos espacio
-        Vector2 direccion = mirandoDerecha ? Vector2.right : Vector2.left;
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, direccion, distanciaSpawn, capasObstaculos);
+        // 2. Comprobación ultra-simple
+        // Creamos un pequeño círculo invisible en la posición del SpawnPoint
+        float radioCheck = 0.2f;
+        Collider2D hit = Physics2D.OverlapCircle(spawnPoint.position, radioCheck, capasObstaculos);
 
-        if (hit.collider == null)
+        // Visualizar el check en el editor (solo para ti)
+        Debug.DrawRay(spawnPoint.position, Vector3.up * 0.5f, hit == null ? Color.green : Color.red, 1f);
+
+        if (hit == null)
         {
-            cloneIsAvailable = false;
-            // RESTA PLANA AL ORIGINAL
+            // --- ÉXITO: El camino está limpio ---
             escalaActual -= perdidaPorClon;
+            GameObject nuevoClonObj = Instantiate(prefabClone, spawnPoint.position, Quaternion.identity);
 
-            Vector3 spawnPos = transform.position + new Vector3(mirandoDerecha ? distanciaSpawn : -distanciaSpawn, 0, 0);
-            GameObject nuevoClonObj = Instantiate(prefabClone, spawnPos, Quaternion.identity);
-
-            // ¡OJO! Asegúrate de que el componente buscado es el nuevo (SlimeController)
             PlayerController scriptClon = nuevoClonObj.GetComponent<PlayerController>();
-
             if (scriptClon != null)
             {
                 scriptClon.esElOriginal = false;
                 scriptClon.mirandoDerecha = this.mirandoDerecha;
-
-                // ASIGNACIÓN PLANA AL CLON
-                // Le damos una escala inicial fija (ej: 0.4)
                 scriptClon.escalaActual = 2f;
-
                 scriptClon.ActualizarEscala();
             }
-
             ActualizarEscala();
+            // El clon devolverá el permiso al morir (CicloDeVidaClon)
+        }
+        else
+        {
+            // --- FALLO: Hay una pared en el punto de spawn ---
+            Debug.Log("No se puede spawnear: " + hit.name + " bloquea el paso.");
+            cloneIsAvailable = true; // DEVOLVEMOS EL CLON AQUÍ
         }
         CambiarEstado(SlimeState.Idle);
     }
@@ -601,9 +638,6 @@ public class PlayerController : MonoBehaviour
             GameObject pickup = Instantiate(prefabPickupClone, transform.position, Quaternion.identity);
             var controller = pickup.GetComponent<PickupController>();
         }
-
-        // 4. Avisar al original que ya puede spawnear otro y morir
-        if (PlayerController.instance != null) PlayerController.instance.cloneIsAvailable = true;
         Destroy(gameObject);
     }
 
@@ -634,6 +668,14 @@ public class PlayerController : MonoBehaviour
                estadoActual == SlimeState.Falling;
     }
     private void Girar() { mirandoDerecha = !mirandoDerecha; ActualizarEscala(); }
+
+    public void ActivarCloneInterface()
+    {
+        if (Vidas_UI != null)
+        {
+            Vidas_UI.CloneAvailable();
+        }
+    }
     public void SumarAmmo()
     {
         audioSourceEffects.PlayOneShot(recogerAmmo);

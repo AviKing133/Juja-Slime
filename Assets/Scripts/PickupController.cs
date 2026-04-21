@@ -3,109 +3,110 @@ using System.Collections;
 
 public class PickupController : MonoBehaviour
 {
-    private Collider2D col;
     private Rigidbody2D rb;
-
-    public InterfaceBehaviour Interface;
 
     [Header("Configuración de Rebote")]
     public int rebotesMaximos = 2;
     private int rebotesRestantes;
     private bool haFrenado = false;
 
+    [Header("Ajustes de Flotación")]
+    public float floatingAmplitude = 0.2f;
+    public float floatingFrequency = 2f;
+    public float hoverHeight = 0.5f;
+
+    [Header("Ajustes de Impacto/Squash")]
+    [Range(0.1f, 0.5f)] public float squashFactor = 0.3f;
+    public float squashRecoverSpeed = 8f;
+
+    private Vector3 originalScale;
+
     [Header("Datos de Contenido")]
-    public int storedAmmo = 0;
+    public int storedAmmo = 1; // Asegúrate de que no sea 0
+    private bool isFloating = false;
 
     void Start()
     {
-        Interface = Object.FindAnyObjectByType<InterfaceBehaviour>();
-        col = GetComponent<Collider2D>();
         rb = GetComponent<Rigidbody2D>();
+        originalScale = transform.localScale;
+
+        // Sincronizamos la variable de rebotes
         rebotesRestantes = rebotesMaximos;
 
-        if (gameObject.CompareTag("pickupClone"))
-        {
-            rb.AddForce(new Vector2(Random.Range(-1f, 1f), 2f), ForceMode2D.Impulse);
-        }
+        // Impulso inicial aleatorio
+        rb.AddForce(new Vector2(Random.Range(-2f, 2f), 4f), ForceMode2D.Impulse);
     }
 
-    void LateUpdate()
+    void Update()
     {
-        // Evitar que el jugador recoja si ya está lleno de munición (solo para balas sueltas)
-        if (PlayerController.instance.ammo >= 3 && gameObject.CompareTag("bullet"))
+        // Recuperar la escala poco a poco si ha sido deformado
+        if (transform.localScale != originalScale && !isFloating)
         {
-            col.isTrigger = true;
-        }
-        else
-        {
-            col.isTrigger = false;
+            transform.localScale = Vector3.Lerp(transform.localScale, originalScale, Time.deltaTime * squashRecoverSpeed);
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // --- LÓGICA DE REBOTE Y FRENADO ---
         if (collision.gameObject.CompareTag("ground") && !haFrenado)
         {
+            ApplyImpactEffect();
+
             rebotesRestantes--;
+
             if (rebotesRestantes <= 0)
             {
-                FrenarPickup();
+                haFrenado = true;
+                StartCoroutine(PrepareAndFloat());
             }
-        }
-
-        // --- LÓGICA DE RECOLECCIÓN ---
-        if (collision.gameObject.CompareTag("player") || collision.gameObject.CompareTag("clone"))
-        {
-            PlayerController player = collision.gameObject.GetComponent<PlayerController>();
-            if (player == null) return;
-
-            // Caso A: Es una bala
-            if (gameObject.CompareTag("bullet") && player.ammo < 3)
-            {
-                player.ammo++;
-                player.ActualizarEscala(); // Recalcula escala total limpia
-                Destroy(gameObject);
-            }
-            // Caso B: Es el clon regresando (solo se recoge si ya frenó en el suelo)
-            else if (gameObject.CompareTag("pickupClone") && haFrenado)
-            {
-                player.cloneIsAvailable = true; // El original recupera su "masa de clon"
-                player.ammo += storedAmmo;      // Recupera la munición que tenía el clon
-                
-
-                // Limitar la munición máxima por seguridad
-                if (player.ammo > 3) player.ammo = 3;
-
-                player.ActualizarEscala(); // Recalcula escala total limpia
-                Destroy(gameObject);
-            }
-            Interface.UpdateVidas(player.ammo);
         }
     }
 
-    void FrenarPickup()
+    IEnumerator PrepareAndFloat()
     {
-        haFrenado = true;
+        yield return new WaitForFixedUpdate();
+
+        // 1. Detener física
         rb.linearVelocity = Vector2.zero;
         rb.angularVelocity = 0f;
         rb.bodyType = RigidbodyType2D.Kinematic;
 
-        StartCoroutine(ElevarEfecto(0.25f, 1f));
-    }
+        // 2. Resetear rotación y escala para que flote derecho
+        transform.rotation = Quaternion.identity;
+        transform.localScale = originalScale;
 
-    IEnumerator ElevarEfecto(float distancia, float tiempo)
-    {
-        Vector3 posicionInicial = transform.position;
-        Vector3 posicionFinal = posicionInicial + new Vector3(0, distancia, 0);
-        float tiempoTranscurrido = 0;
+        // 3. Elevación suave
+        Vector3 targetHoverPos = transform.position + Vector3.up * hoverHeight;
+        float elapsed = 0f;
+        float duration = 0.5f;
+        Vector3 startPos = transform.position;
 
-        while (tiempoTranscurrido < tiempo)
+        while (elapsed < duration)
         {
-            transform.position = Vector3.Lerp(posicionInicial, posicionFinal, tiempoTranscurrido / tiempo);
-            tiempoTranscurrido += Time.deltaTime;
+            transform.position = Vector3.Lerp(startPos, targetHoverPos, elapsed / duration);
+            elapsed += Time.deltaTime;
             yield return null;
         }
-        transform.position = posicionFinal;
+
+        // 4. ACTIVAR BUCLE (Vital)
+        isFloating = true;
+        Vector3 basePos = transform.position;
+
+        while (isFloating)
+        {
+            float newY = basePos.y + Mathf.Sin(Time.time * floatingFrequency) * floatingAmplitude;
+            transform.position = new Vector3(transform.position.x, newY, transform.position.z);
+            yield return null;
+        }
+    }
+
+    private void ApplyImpactEffect()
+    {
+        // Deformación simple: se aplasta en Y, se ensancha en X
+        transform.localScale = new Vector3(
+            originalScale.x * 1.3f,
+            originalScale.y * squashFactor,
+            originalScale.z
+        );
     }
 }
