@@ -364,7 +364,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   anim: {fileID: 0}
-  Interface: {fileID: 0}
+  Vidas_UI: {fileID: 0}
   audioSourceWalk: {fileID: 4179546873105542104}
   audioSourceEffects: {fileID: 46201312678860517}
   cargarSalto: {fileID: 8300000, guid: 03891d9c5d7084a4c925c2f8c2d8ef7d, type: 3}

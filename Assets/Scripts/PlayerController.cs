@@ -67,7 +67,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Referencias")]
     public Animator anim;
-    public InterfaceBehaviour Interface;
+    public UI_vida Vidas_UI;
     public AudioSource audioSourceWalk;
     public AudioSource audioSourceEffects;
 
@@ -100,7 +100,6 @@ public class PlayerController : MonoBehaviour
     {
         audioSourceWalk = GetComponent<AudioSource>();
         audioSourceWalk.clip = walk;
-        Interface = FindFirstObjectByType<InterfaceBehaviour>();
 
         // Sonido Spawn
         audioSourceEffects.PlayOneShot(spawn);
@@ -257,7 +256,7 @@ public class PlayerController : MonoBehaviour
             tiempoUltimoMelee = Time.time;
             StartCoroutine(SecuenciaMelee());
         }
-        if (Input.GetKeyDown(teclaRanged) && Time.time > tiempoUltimoDisparo + cadenciaRanged)
+        if (Input.GetKeyDown(teclaRanged) && Time.time > tiempoUltimoDisparo + cadenciaRanged && ammo > 0)
         {
             tiempoUltimoMelee = Time.time;
             StartCoroutine(SecuenciaDisparo());
@@ -478,6 +477,7 @@ public class PlayerController : MonoBehaviour
 
         // 1. Tiempo de "aturdimiento" (bloqueo de controles)
         // Es lo que dura la animación de rebote/dolor
+        Vidas_UI.UpdateVidas(ammo);
         yield return new WaitForSeconds(0.4f);
 
         // Devolvemos el estado a la normalidad para que pueda moverse
@@ -515,7 +515,7 @@ public class PlayerController : MonoBehaviour
             rangedController.OrderFire();
         }
 
-        // REDUCE este tiempo para probar. Si es muy largo, parecerá que está lockeado.
+        Vidas_UI.UpdateVidas(ammo);
         yield return new WaitForSeconds(0.3f);
 
         // FUERZA el regreso a un estado que NO esté en la lista de exclusión
@@ -557,7 +557,6 @@ public class PlayerController : MonoBehaviour
         if (hit.collider == null)
         {
             cloneIsAvailable = false;
-
             // RESTA PLANA AL ORIGINAL
             escalaActual -= perdidaPorClon;
 
@@ -638,6 +637,7 @@ public class PlayerController : MonoBehaviour
     public void SumarAmmo()
     {
         audioSourceEffects.PlayOneShot(recogerAmmo);
-        ammo = Mathf.Min(ammo + 1, 3); // Limita a un máximo de 3
+        ammo = Mathf.Min(ammo + 1, 5); // Limita a un máximo de 5
+        Vidas_UI.UpdateVidas(ammo);
     }
 }

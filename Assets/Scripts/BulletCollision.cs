@@ -32,7 +32,7 @@ public class BulletCollision : MonoBehaviour
         if (collision.gameObject.CompareTag("player"))
         {
             PlayerController player = collision.gameObject.GetComponent<PlayerController>();
-            if (player != null && player.ammo < 3)
+            if (player != null && player.ammo < 5)
             {
                 player.SumarAmmo();
                 Destroy(gameObject);
