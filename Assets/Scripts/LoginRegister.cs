@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class LoginRegister : MonoBehaviour
 {
@@ -14,13 +15,14 @@ public class LoginRegister : MonoBehaviour
         username = usernameInput.text;
         password = passwordInput.text;
 
-        StartCoroutine(GameManager.Instance.CargarJuego(username, password));
+        GameManager.Instance.RecibirUsernamePassword(username, password);
+        SceneManager.LoadScene("PantallaCarga");
     }
     public void OnRegisterButtonClicked()
     {
         username = usernameInput.text;
         password = passwordInput.text;
-        StartCoroutine(GameManager.Instance.RegistrarUsuario(username, password));
+        GameManager.Instance.RegistrarUsuario(username, password);
     }
 
     public void CloseButton()

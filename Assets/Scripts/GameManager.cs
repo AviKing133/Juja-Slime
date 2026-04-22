@@ -31,6 +31,12 @@ public class LoginRequest { public string username; public string password; }
 
 public class GameManager : MonoBehaviour
 {
+    [Header("Configuración Game Over")]
+    public CanvasGroup grupoGameOver; 
+    public float velocidadFade = 1.0f;
+
+    public string username;
+    public string password;
     public static GameManager Instance { get; set; }
     public TMP_Text feedbackText;
 
@@ -45,16 +51,12 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            SceneManager.sceneLoaded += OnSceneLoaded;
         }
         else
         {
             Destroy(gameObject);
         }
-    }
-
-    private void Start()
-    {
-
     }
 
     public IEnumerator CargarJuego(string user, string pass)
@@ -91,6 +93,7 @@ public class GameManager : MonoBehaviour
             else
             {
                 Debug.LogError("Fallo Login: " + request.responseCode + " - " + request.error);
+                SceneManager.LoadScene("MainMenu");
             }
         }
     }
@@ -182,14 +185,71 @@ public class GameManager : MonoBehaviour
             if (request.result == UnityWebRequest.Result.Success)
             {
                 Debug.Log("<color=green>API OK:</color> Nivel actualizado en MySQL.");
+
+                // 1. Actualizamos el dato en el Manager
                 jugadorActivo.nivelActual = nivel;
-                SceneManager.LoadScene("Nivel" + nivel);
+                SceneManager.LoadScene("PantallaCarga");
             }
             else
             {
                 Debug.LogError("Error API al guardar: " + request.error);
-                SceneManager.LoadScene("Nivel" + nivel); // Cargamos igual para no romper el flujo
+                SceneManager.LoadScene("PantallaCarga");
             }
         }
+    }
+    private IEnumerator EfectoFadeInGameOver()
+    {
+        // 1. Activa el objeto (por si estaba desactivado en la jerarquía)
+        grupoGameOver.gameObject.SetActive(true);
+
+        // 2. Asegura que empiece totalmente transparente
+        grupoGameOver.alpha = 0;
+
+        // 3. Desactiva interacciones para que el botón no funcione antes de verse
+        grupoGameOver.interactable = false;
+        grupoGameOver.blocksRaycasts = false;
+
+        float tiempo = 0;
+        while (tiempo < 1f)
+        {
+            // El factor (1.0f / velocidadFade) ajusta el tiempo a segundos reales
+            tiempo += Time.deltaTime * (1.0f / velocidadFade);
+
+            // Esto cambia el alpha del PANEL y de todo lo que tenga dentro a la vez
+            grupoGameOver.alpha = Mathf.Lerp(0, 1, tiempo);
+
+            yield return null;
+        }
+
+        // 4. Finaliza activando los clicks
+        grupoGameOver.alpha = 1;
+        grupoGameOver.interactable = true;
+        grupoGameOver.blocksRaycasts = true;
+    }
+
+    // UTILIDADES
+    public void PantallaDeCarga()
+    {
+        jugadorActivo = null;
+        SceneManager.LoadScene("PantallaCarga");
+    }
+    public void GameOver()
+    {
+        if (grupoGameOver != null)
+        {
+            StartCoroutine(EfectoFadeInGameOver());
+        }
+    }
+    public void RecibirUsernamePassword(string user, string pass)
+    {
+        username = user;
+        password = pass;
+    }
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "PantallaCarga")
+        {
+            StartCoroutine(CargarJuego(username, password));
+        }        
     }
 }

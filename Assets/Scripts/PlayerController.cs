@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -31,7 +30,9 @@ public class PlayerController : MonoBehaviour
     public RangedController rangedController;
     public float tiempoUltimoDisparo;
     public float cadenciaRanged;
+    public bool haveDamage = false;
     public int ammo;
+
 
     [Header("Configuración Salto Cargado")]
     public float fuerzaMinima = 5f;
@@ -73,6 +74,7 @@ public class PlayerController : MonoBehaviour
     public AudioSource audioSourceWalk;
     public AudioSource audioSourceEffects;
     public Image barraCarga;
+    public Image barraCargaBackground;
 
     // ClipsAudio
     public AudioClip cargarSalto;
@@ -275,6 +277,8 @@ public class PlayerController : MonoBehaviour
                 CambiarEstado(SlimeState.PreCharge);
 
                 // Mostramos la barra al empezar a cargar
+                barraCarga.gameObject.SetActive(true);   
+                barraCargaBackground.gameObject.SetActive(true);
                 if (barraCarga != null) barraCarga.fillAmount = 0f;
 
                 audioSourceEffects.clip = cargarSalto;
@@ -311,6 +315,9 @@ public class PlayerController : MonoBehaviour
                 audioSourceEffects.pitch = 1f;
                 audioSourceEffects.PlayOneShot(jumpRelease);
                 audioSourceEffects.loop = false;
+                // Hacerlo invisible
+                barraCarga.gameObject.SetActive(false);
+                barraCargaBackground.gameObject.SetActive(false);
 
                 CambiarEstado(SlimeState.Jump);
                 EjecutarSalto();
@@ -657,6 +664,7 @@ public class PlayerController : MonoBehaviour
     }
     public void EventoMuerte()
     {
+        GameManager.Instance.GameOver();
         Destroy(gameObject);
     }
     private bool PuedeMoverse()
@@ -681,5 +689,10 @@ public class PlayerController : MonoBehaviour
         audioSourceEffects.PlayOneShot(recogerAmmo);
         ammo = Mathf.Min(ammo + 1, 5); // Limita a un máximo de 5
         Vidas_UI.UpdateVidas(ammo);
+    }
+    public void ManageDamageBossFight()
+    {
+        if (esElOriginal)
+        haveDamage = !haveDamage;
     }
 }

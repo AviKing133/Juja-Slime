@@ -60,7 +60,7 @@ public class Enemigo1Controller : MonoBehaviour
         bool detectaParedValida = false;
         if (hitPared.collider != null && hitPared.collider.gameObject != gameObject)
         {
-            if (hitPared.collider.CompareTag("ground") || hitPared.collider.CompareTag("walls"))
+            if (hitPared.collider.CompareTag("ground") || hitPared.collider.CompareTag("walls") || hitPared.collider.CompareTag("enemy"))
             {
                 detectaParedValida = true;
             }

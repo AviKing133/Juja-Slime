@@ -19,14 +19,9 @@ public class Door : MonoBehaviour
 
             if (GameManager.Instance != null)
             {
-                isOpened = false; // Bloqueamos para que no se ejecute 60 veces por segundo
+                isOpened = false;
                 Debug.Log("<color=cyan>Puerta:</color> Guardando progreso hacia nivel " + nivelADondeVa);
                 GameManager.Instance.GuardarProgreso(nivelADondeVa);
-            }
-            else
-            {
-                Debug.LogError("No se encontró el GameManager en la escena.");
-                SceneManager.LoadScene("Nivel" + nivelADondeVa);
             }
         }
     }
