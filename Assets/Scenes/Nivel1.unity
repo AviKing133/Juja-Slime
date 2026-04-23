@@ -2236,6 +2236,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lever
       objectReference: {fileID: 0}
+    - target: {fileID: 4546750808242434116, guid: 3f953fa714d70cd40a83bf4a3e2a43cb, type: 3}
+      propertyPath: pista
+      value: It seem like this opens the door...
+      objectReference: {fileID: 0}
     - target: {fileID: 5810871544062803664, guid: 3f953fa714d70cd40a83bf4a3e2a43cb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.51
@@ -7158,7 +7162,7 @@ GameObject:
   - component: {fileID: 747277048}
   m_Layer: 0
   m_Name: Shortcut1
-  m_TagString: Untagged
+  m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9255,6 +9259,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1925038194708729017, guid: af591e97bdd9cfb478ba4f8392081009, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3087367347491423449, guid: af591e97bdd9cfb478ba4f8392081009, type: 3}
       propertyPath: nivelADondeVa
       value: 2
@@ -9520,7 +9528,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -180953,6 +180961,10 @@ PrefabInstance:
       propertyPath: FlechaIndicadora
       value: 
       objectReference: {fileID: 220701433}
+    - target: {fileID: 9209480708284872311, guid: 6a782f68ecbbe8540a467a6b4081e02a, type: 3}
+      propertyPath: pista
+      value: Something moved below...
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

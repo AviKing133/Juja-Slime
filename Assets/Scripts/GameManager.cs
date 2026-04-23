@@ -38,12 +38,13 @@ public class GameManager : MonoBehaviour
     public string username;
     public string password;
     public static GameManager Instance { get; set; }
-    public TMP_Text feedbackText;
 
     [Header("Configuración API")]
     public string urlApi = "https://localhost:7164/api/auth";
     [Header("Estado del Jugador")]
     public PlayerData jugadorActivo;
+    public GameObject loading;
+    public GameObject error;
 
     private void Awake()
     {
@@ -118,40 +119,13 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                // 1. Manejo por código numérico
-                if (request.responseCode == 409)
-                {
-                    MostrarMensajeEnPantalla("El usuario ya está registrado.");
-                }
-                else if (request.responseCode == 400)
-                {
-                    // 2. Intentar leer detalle del JSON
-                    try
-                    {
-                        var error = JsonUtility.FromJson<ErrorResponse>(request.downloadHandler.text);
-                        MostrarMensajeEnPantalla("Error: " + error.message);
-                    }
-                    catch
-                    {
-                        MostrarMensajeEnPantalla("Datos inválidos.");
-                    }
-                }
-                else
-                {
-                    MostrarMensajeEnPantalla("Error de conexión: " + request.error);
-                }
+                error.SetActive(true);
+                StartCoroutine(MostrarYEsconder());
             }
-        }
-    }
-
-    // Método auxiliar para feedback visual al usuario
-    void MostrarMensajeEnPantalla(string msg)
-    {
-        Debug.Log("<color=red>FEEDBACK:</color> " + msg);
-        if (feedbackText != null)
-        {
-            feedbackText.text = msg;
-            feedbackText.gameObject.SetActive(true);
+            if (loading != null)
+            {
+                loading.SetActive(false);
+            }
         }
     }
     public void GuardarProgreso(int proximoNivel)
@@ -238,6 +212,23 @@ public class GameManager : MonoBehaviour
         if (grupoGameOver != null)
         {
             StartCoroutine(EfectoFadeInGameOver());
+        }
+    }
+    private IEnumerator MostrarYEsconder()
+    {
+        // 1. Hacemos el objeto visible
+        if (error != null)
+        {
+            error.SetActive(true);
+        }
+
+        // 2. Esperamos los segundos indicados
+        yield return new WaitForSeconds(5f);
+
+        // 3. Lo hacemos invisible
+        if (error != null)
+        {
+            error.SetActive(false);
         }
     }
     public void RecibirUsernamePassword(string user, string pass)

@@ -48,9 +48,10 @@ MonoBehaviour:
   velocidadFade: 2
   username: 
   password: 
-  feedbackText: {fileID: 0}
-  urlApi: https://localhost:7164/api/auth
+  urlApi: https://api-jujaslime.onrender.com/api/Auth
   jugadorActivo:
     id: 0
     username: 
     nivelActual: 0
+  loading: {fileID: 0}
+  error: {fileID: 0}
