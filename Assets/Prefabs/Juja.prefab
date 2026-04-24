@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 146484969945617303}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.14, y: 0.259, z: 0}
+  m_LocalPosition: {x: 0.086, y: 0.193, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -341,6 +341,7 @@ MonoBehaviour:
   rangedController: {fileID: 7026701524182183437}
   tiempoUltimoDisparo: 0
   cadenciaRanged: 1
+  haveDamage: 0
   ammo: 3
   fuerzaMinima: 5
   fuerzaMaxima: 14
@@ -369,6 +370,8 @@ MonoBehaviour:
   Vidas_UI: {fileID: 0}
   audioSourceWalk: {fileID: 4179546873105542104}
   audioSourceEffects: {fileID: 46201312678860517}
+  barraCarga: {fileID: 0}
+  barraCargaBackground: {fileID: 0}
   cargarSalto: {fileID: 8300000, guid: 03891d9c5d7084a4c925c2f8c2d8ef7d, type: 3}
   jumpRelease: {fileID: 8300000, guid: dd6ef0e8c5979324594d12b472e3a35f, type: 3}
   melee: {fileID: 8300000, guid: 547d1a17471d41c49b5d96992cf4aebb, type: 3}
@@ -680,7 +683,7 @@ Transform:
   m_GameObject: {fileID: 5972560896620542941}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.345, y: 0.123, z: 0}
+  m_LocalPosition: {x: 0.248, y: 0.107, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -711,7 +714,7 @@ Transform:
   m_GameObject: {fileID: 6997499901735200955}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.356, y: -0.049, z: 0}
+  m_LocalPosition: {x: 0.286, y: -0.049, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -742,7 +745,7 @@ Transform:
   m_GameObject: {fileID: 8197693177891012514}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.425, y: -0.139, z: 0}
+  m_LocalPosition: {x: 0.363, y: -0.155, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

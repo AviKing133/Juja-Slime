@@ -9261,7 +9261,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1925038194708729017, guid: af591e97bdd9cfb478ba4f8392081009, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3087367347491423449, guid: af591e97bdd9cfb478ba4f8392081009, type: 3}
       propertyPath: nivelADondeVa
