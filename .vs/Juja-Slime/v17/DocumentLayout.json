@@ -1,28 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Unity\\Proyectos\\Juja-Slime\\",
+  "WorkspaceRootPath": "C:\\Users\\carus\\Juja-Slime\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|D:\\Unity\\Proyectos\\Juja-Slime\\assets\\scripts\\loginregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|c:\\users\\carus\\juja-slime\\assets\\scripts\\pickupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\pickupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|c:\\users\\carus\\juja-slime\\assets\\scripts\\bulletcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bulletcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|c:\\users\\carus\\juja-slime\\assets\\scripts\\bulletcollision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bulletcollision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|C:\\Users\\carus\\Juja-Slime\\assets\\scripts\\loginregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\loginregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|d:\\unity\\proyectos\\juja-slime\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|c:\\users\\carus\\juja-slime\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\Utilidades\\PanelGameOver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|D:\\Unity\\Proyectos\\Juja-Slime\\assets\\scripts\\boss1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\boss1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|D:\\Unity\\Proyectos\\Juja-Slime\\assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|C:\\Users\\carus\\Juja-Slime\\assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\Utilidades\\DisparadorPantallaCarga.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\Utilidades\\PanelGameOver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Utilidades\\PanelGameOver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|C:\\Users\\carus\\Juja-Slime\\assets\\scripts\\boss1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07E95618-FA00-FEF6-662A-BD7BCADE7EB2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\boss1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -32,15 +42,66 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "BulletController.cs",
+              "DocumentMoniker": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\BulletController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\BulletController.cs",
+              "ToolTip": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\BulletController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\BulletController.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAgwBoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T11:30:34.894Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BulletCollision.cs",
+              "DocumentMoniker": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\BulletCollision.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\BulletCollision.cs",
+              "ToolTip": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\BulletCollision.cs",
+              "RelativeToolTip": "Assets\\Scripts\\BulletCollision.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T11:30:27.602Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PickupController.cs",
+              "DocumentMoniker": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\PickupController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PickupController.cs",
+              "ToolTip": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\PickupController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PickupController.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T11:30:08.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Boss1.cs",
-              "DocumentMoniker": "D:\\Unity\\Proyectos\\Juja-Slime\\Assets\\Scripts\\Boss1.cs",
+              "DocumentMoniker": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\Boss1.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Boss1.cs",
-              "ToolTip": "D:\\Unity\\Proyectos\\Juja-Slime\\Assets\\Scripts\\Boss1.cs",
+              "ToolTip": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\Boss1.cs",
               "RelativeToolTip": "Assets\\Scripts\\Boss1.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAowC8AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -48,60 +109,62 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "PanelGameOver.cs",
               "DocumentMoniker": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\Utilidades\\PanelGameOver.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Utilidades\\PanelGameOver.cs",
               "ToolTip": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\Utilidades\\PanelGameOver.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Utilidades\\PanelGameOver.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-22T11:36:11.187Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "PlayerController.cs",
-              "DocumentMoniker": "D:\\Unity\\Proyectos\\Juja-Slime\\Assets\\Scripts\\PlayerController.cs",
+              "DocumentMoniker": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerController.cs",
-              "ToolTip": "D:\\Unity\\Proyectos\\Juja-Slime\\Assets\\Scripts\\PlayerController.cs",
+              "ToolTip": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\PlayerController.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerController.cs",
-              "ViewState": "AgIAAIsCAAAAAAAAAAAuwLYCAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAADYAAAAAAAAAAAAwwIkCAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-22T10:31:24.207Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DisparadorPantallaCarga.cs",
-              "DocumentMoniker": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\Utilidades\\DisparadorPantallaCarga.cs",
-              "ToolTip": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\Utilidades\\DisparadorPantallaCarga.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-22T09:55:45.269Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "LoginRegister.cs",
-              "DocumentMoniker": "D:\\Unity\\Proyectos\\Juja-Slime\\Assets\\Scripts\\LoginRegister.cs",
+              "DocumentMoniker": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\LoginRegister.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\LoginRegister.cs",
-              "ToolTip": "D:\\Unity\\Proyectos\\Juja-Slime\\Assets\\Scripts\\LoginRegister.cs",
+              "ToolTip": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\LoginRegister.cs",
               "RelativeToolTip": "Assets\\Scripts\\LoginRegister.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAYwD8AAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAABcAAAAAAAAAAAAQwD8AAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-22T09:33:30.25Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "GameManager.cs",
-              "DocumentMoniker": "D:\\Unity\\Proyectos\\Juja-Slime\\Assets\\Scripts\\GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
-              "ToolTip": "D:\\Unity\\Proyectos\\Juja-Slime\\Assets\\Scripts\\GameManager.cs",
+              "ToolTip": "C:\\Users\\carus\\Juja-Slime\\Assets\\Scripts\\GameManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
-              "ViewState": "AgIAAMwAAAAAAAAAAADwv+YAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAJoAAAAAAAAAAAAkwOYAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-22T09:28:48.785Z",
               "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }

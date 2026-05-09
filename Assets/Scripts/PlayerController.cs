@@ -384,7 +384,6 @@ public class PlayerController : MonoBehaviour
         if (estaCargando) return;
 
         // 1. Bloqueos críticos (Solo estados que duran hasta que el código diga lo contrario)
-        // HE QUITADO MeleeAttack de aquí para que el código pueda sacarlo de ese estado
         if (estadoActual == SlimeState.Clon || estadoActual == SlimeState.Spawn ||
             estadoActual == SlimeState.Hit || estadoActual == SlimeState.Shoot)
             return;
@@ -649,7 +648,6 @@ public class PlayerController : MonoBehaviour
     }
 
     // METODOS DE APOYO
-
     public void FinalizarSpawn() { anim.SetBool("IsAlive", true); CambiarEstado(SlimeState.Idle); }
     public void CambiarEstado(SlimeState nuevo) { estadoActual = nuevo; }
     private void ActualizarAnimator()
@@ -676,7 +674,6 @@ public class PlayerController : MonoBehaviour
                estadoActual == SlimeState.Falling;
     }
     private void Girar() { mirandoDerecha = !mirandoDerecha; ActualizarEscala(); }
-
     public void ActivarCloneInterface()
     {
         if (Vidas_UI != null)
